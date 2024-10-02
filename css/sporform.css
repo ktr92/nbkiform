@@ -1,3 +1,138 @@
 .sporform {
   padding: 40px 50px;
 }
+.sporform h1 {
+  font-weight: 500;
+font-size: 38px;
+line-height: 1.2 ;
+margin-bottom: 40px;
+}
+
+
+.sporform {
+}
+.sporform__container {
+  display: flex;
+}
+.sporform__aside {
+  margin-right: 100px;
+  min-width: 200px;
+  max-width: 200px;
+
+}
+.sporform__steps {
+}
+.sporform__step {
+  margin-bottom: 11px;
+
+}
+.sporform__stepstatus {
+  color: #252838;
+  position: relative;
+  font-weight: 400;
+font-size: 14px;
+line-height: 129%;
+letter-spacing: -0.01em;
+}
+.sporform__stepstatus.success::after {
+  content: url(../img/sporformcheck.svg);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sporform__stepstatus.current {
+  font-weight: 500;
+}
+.sporform__main {
+  width: 100%;
+}
+.sporform__form {
+}
+.sporform__section {
+  margin-bottom: 32px;
+}
+.sporform__title {
+  font-weight: 500;
+font-size: 20px;
+margin-bottom: 32px;
+}
+.sporform__fields {
+}
+.sporform__field {
+}
+.calcform__input {
+}
+.sporform__input {
+}
+.placeholder {
+}
+
+
+.v5input {
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 14px;
+  
+}
+.v5input .placeholder {
+  /* p4_regular */
+  font-family: Formular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  color: #7b7794;
+  position: absolute;
+  left: 15px;
+  display: block;
+  white-space: nowrap;
+  transition: all, 0.2s;
+
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.v5input .placeholder {
+  padding: 0 5px;
+  top: 0;
+  background-color: #fff;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 3;
+}
+
+.v5input input {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--Gray-Border, #aeb5d1);
+/*   background: #fff; */
+  display: block;
+  width: 100%;
+  height: unset;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.v5input label {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: #000;
+  font-weight: 400;
+font-size: 14px;
+line-height: 171%;
+opacity: 1;
+
+}
+
+.v5input_noph {
+  padding-top: 0;
+}
+.v5input label:before {
+ border-color: #aeb5d1;
+}
+

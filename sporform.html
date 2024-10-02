@@ -53,7 +53,6 @@
 
 
 
-  <script src="//nbki.ru/bitrix/js/main/core/core_fx.js?165476589816888"></script>
   <!--[if lt IE 9]><script src="//nbki.ruhttps://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
 
 
@@ -68,7 +67,6 @@
   <script src="//nbki.ru/local/templates/nbkiv4/public/js/main.js?172233052538044"></script>
   <script src="//nbki.ru/local/templates/nbkiv4/public/js/old.main.js?172259437841409"></script>
   <script src="//nbki.ru/local/templates/nbkiv4/public/js/ingevents.4.0.9b.js?166090484919144"></script>
-  <script src="js/sporform.js"></script>
 
 
   <meta property="og:title" content="Оспорить кредитную историю" />
@@ -899,7 +897,60 @@
       <div class="container pagecontent_v5 pagecontent_v4">
         <div class="nbki_v4 wrapperwhite wrapperwhite_v5 sporform">
           <h1>Заявление об оспаривании данных <br> в кредитной истории</h1>
-
+          <div class="sporform__container">
+            <div class="sporform__aside">
+              <div class="sporform__steps" data-formsteps='sporform'>
+                <div class="sporform__step" data-formstep='1'>
+                  <div class="sporform__stepstatus success">Персональные данные</div>
+                </div><!-- /.sporform__step -->
+                <div class="sporform__step" data-formstep='2'>
+                  <div class="sporform__stepstatus current">Контактные данные</div>
+                </div><!-- /.sporform__step -->
+                <div class="sporform__step" data-formstep='3'>
+                  <div class="sporform__stepstatus">Предмет оспаривания</div>
+                </div><!-- /.sporform__step -->
+              </div><!-- /.sporform__steps -->
+            </div><!-- /.sporform__aside -->
+            <div class="sporform__main">
+              <div class="sporform__form">
+                <form action="">
+                  <div class="sporform__section" data-formsection='1'>
+                    <div class="sporform__title">Персональные данные</div>
+                    <div class="sporform__fields">
+                      <div class="sporform__field">
+                        <div class="v5input sporform__input">
+                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name1" >
+                          <span class="placeholder">Фамилия *</span>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field">
+                        <div class="v5input sporform__input">
+                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name2" >
+                          <span class="placeholder">Имя *</span>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field" data-depend='isname3'>
+                        <div class="v5input sporform__input">
+                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name3" >
+                          <span class="placeholder">Отчество *</span>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field" data-depend='isname3'>
+                        <div class="v5input sporform__input v5input_noph">
+                          <div class="check-block check-block_big ">
+                            <input name="isname3" id="isname3" value="isname3" type="checkbox" class="inputcheckbox n2">
+                            <label for="isname3">
+                              <span>У меня нет отчества</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                    </div><!-- /.sporform__fields -->
+                  </div><!-- /.sporform__section -->
+                </form>
+              </div><!-- /.sporform__form -->
+            </div><!-- /.sporform__main -->
+          </div><!-- /.sporform__container -->
         </div>
       </div>
     </div>
@@ -1937,6 +1988,9 @@
       })
     }
   </script>
+    <script src="//nbki.ru/calculator/js/jquery.inputmask.min.js?1695372028143825"></script>
+
+  <script src="js/sporform.js"></script>
 
 </body>
 
