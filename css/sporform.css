@@ -136,3 +136,125 @@ opacity: 1;
  border-color: #aeb5d1;
 }
 
+.v5input input.error {
+  color: #FF0029;
+  border-color: #FF0029;
+}
+.v5input input.error + .placeholder {
+  color: #FF0029;
+
+
+}
+
+.v5input select {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--Gray-Border, #aeb5d1);
+  /* background: #fff; */
+  display: block;
+  width: 100%;
+  height: unset;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.v5input .calcform__select-item:hover {
+  color: #4563FF;
+
+
+}
+
+.v5input .calcform__select {
+  width: 100%;
+  position: relative;
+}
+
+
+.v5input .calcform__select select {
+  display: none;
+}
+
+
+.v5input .calcform__select .calcform__select-selected {
+}
+
+
+.v5input .calcform__select .calcform__select-item {
+  cursor: pointer;
+  padding: 12px 14px;
+}
+
+
+.v5input .calcform__select .calcform__select-item:hover {
+}
+
+
+.v5input .calcform__select .calcform__select-all {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-10px);
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #aeb5d1;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+
+.v5input .calcform__select .all-items-hide {
+  display: none;
+}
+
+
+.v5input .expand_more {
+  background-image: url(../img/expand_more.svg);
+  background-position: center right 14px;
+  background-repeat: no-repeat;
+}
+
+.v5input .calcform__select .calcform__select-selected {
+   background-position: center right 14px;
+  background-repeat: no-repeat;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--Gray-Border, #aeb5d1);
+  /* background-color: #fff; */
+  display: block;
+  width: 100%;
+  height: unset;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+  font-family: Formular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  cursor: pointer;
+}
+
+.v5input .calcform__select .calcform__select-selected {
+  background-image: url(../img/expand_more.svg);
+  background-position: center right 14px;
+  background-repeat: no-repeat;
+}
+
+.v5input .calcform__item_select .calcform__input {
+  position: relative;
+}
+
+.v5input  .open .calcform__select {
+  box-shadow: 0 36px 38px 0 rgba(115, 100, 178, 0.2);
+}
+.v5input .calcform__select-item.active {
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_27715_2581" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><rect width="20" height="20" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_27715_2581)"><path d="M7.97897 14.396C7.88164 14.396 7.78464 14.375 7.68797 14.333C7.59064 14.2917 7.50031 14.2293 7.41697 14.146L3.99997 10.729C3.86131 10.5903 3.79531 10.4273 3.80197 10.24C3.80864 10.052 3.87464 9.88868 3.99997 9.75001C4.13864 9.61135 4.30197 9.54201 4.48997 9.54201C4.67731 9.54201 4.83331 9.61135 4.95797 9.75001L8.02097 12.812L15.062 5.77101C15.1873 5.63168 15.3403 5.56201 15.521 5.56201C15.7016 5.56201 15.8543 5.63168 15.979 5.77101C16.1183 5.90968 16.188 6.06601 16.188 6.24001C16.188 6.41335 16.1183 6.56935 15.979 6.70801L8.54197 14.146C8.45864 14.2293 8.36831 14.2917 8.27097 14.333C8.17364 14.375 8.07631 14.396 7.97897 14.396Z" fill="%234563FF"/></g></svg>');
+}

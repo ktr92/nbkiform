@@ -919,30 +919,64 @@
                     <div class="sporform__fields">
                       <div class="sporform__field">
                         <div class="v5input sporform__input">
-                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name1" >
+                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name1" data-length='2' data-required='required'>
                           <span class="placeholder">Фамилия *</span>
                         </div>
                       </div><!-- /.sporform__field -->
                       <div class="sporform__field">
                         <div class="v5input sporform__input">
-                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name2" >
+                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name2" data-required='required' data-length='2'>
                           <span class="placeholder">Имя *</span>
                         </div>
                       </div><!-- /.sporform__field -->
-                      <div class="sporform__field" data-depend='isname3'>
+                      <div class="sporform__field" data-depend-on='isname3'>
                         <div class="v5input sporform__input">
-                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name3" >
+                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name3"  data-required='required' data-length='2'>
                           <span class="placeholder">Отчество *</span>
                         </div>
                       </div><!-- /.sporform__field -->
                       <div class="sporform__field" data-depend='isname3'>
                         <div class="v5input sporform__input v5input_noph">
                           <div class="check-block check-block_big ">
-                            <input name="isname3" id="isname3" value="isname3" type="checkbox" class="inputcheckbox n2">
+                            <input name="isname3" id="isname3" value="isname3" type="checkbox" class="inputcheckbox n2"  >
                             <label for="isname3">
                               <span>У меня нет отчества</span>
                             </label>
                           </div>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field" >
+                        <div class="v5input sporform__input">
+                          <input type="text" data-mask='date' value="" name="sporform_sec1_bdate"  data-required='required' data-length='10'>
+                          <span class="placeholder">Дата рождения *</span>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field" >
+                        <div class="v5input sporform__input" data-dependselect="isdoc">
+                          <div class="calcform__item calcform__item_select">
+                            <div class="calcform__input">
+                              <div class="calcform__select ">
+                                <select name="sporform_sec1_doc" id="sporform_sec1_doc">
+                                  <option value="ispassport">Паспорт гражданина РФ</option>
+                                  <option value="ismilitary">Военный билет</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                         
+                          <span class="placeholder">Удостоверение личности *</span>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field" data-dependselect-on="isdoc" data-selectvalue='ispassport'>
+                        <div class="v5input sporform__input">
+                          <input type="text" data-mask='passport' value="" name="sporform_sec1_passp1"  data-required='required' data-length='11'>
+                          <span class="placeholder">Серия и номер документа *</span>
+                        </div>
+                      </div><!-- /.sporform__field -->
+                      <div class="sporform__field" data-dependselect-on="isdoc" data-selectvalue='ismilitary'>
+                        <div class="v5input sporform__input">
+                          <input type="text" data-mask='' value="" name="sporform_sec1_passp1"  data-required='required' data-length='11'>
+                          <span class="placeholder">Военный билет *</span>
                         </div>
                       </div><!-- /.sporform__field -->
                     </div><!-- /.sporform__fields -->
