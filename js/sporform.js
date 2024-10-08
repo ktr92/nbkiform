@@ -52,21 +52,28 @@ const sporform = (function () {
 
   const checkDepend = () => {
     const $dependon = $("[data-depend-on]")
-    console.log($dependon)
     if ($dependon.length) {
       $dependon.each(function () {
         const $input = $(this).find("input")
         const dependvalue = $(this).attr("data-depend-on")
+        const depentype = $(this).data("dependtype")
 
         const $depend = $(`[data-depend=${dependvalue}]`)
         const $check = $depend.find('input[type="checkbox"]')
+            console.log(depentype)
 
         if ($check.is(":checked")) {
           $input.removeAttr("data-required").removeClass("error")
           $(this).addClass("checked")
+          if (depentype && depentype === 'reverse') {
+            $input.attr("data-required", 'required')
+          }
         } else {
           $input.attr("data-required", "required")
           $(this).removeClass("checked")
+          if (depentype && depentype === 'reverse') {
+            $input.removeAttr("data-required")
+          }
         }
       })
     }
@@ -109,13 +116,14 @@ const sporform = (function () {
     return valid
   }
 
-  const validate = () => {
+  const validate = (selector = 'form') => {
     let valid = 1
-    const $req = $('[data-required="required"]')
+    const $req = $(`${selector} [data-required="required"]`);
 
-    Array($req).forEach((element) => {
-      valid *= validateInput(element)
+    $req.each(function() {
+      valid *= validateInput($(this))
     })
+    return valid
   }
 
   const listenersInit = () => {
@@ -141,12 +149,42 @@ const sporform = (function () {
     })
     $(document).on("click", ".sporform [type='submit']", function (e) {
       e.preventDefault()
-      validate()
+      validateSection()
     })
     $(document).on("click", '[data-action="addsubject"]', function (e) {
       e.preventDefault()
       addSubject()
     })
+
+    $(document).on("click", '[data-action="addsubject"]', function (e) {
+      e.preventDefault()
+      addSubject()
+    })
+    $(document).on("focus", '[data-formsection]', function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      const isSection = $(this).attr('data-formsection');
+      const sectId = isSection ? isSection : $(this).closest('data-formsection');
+      validateSection(sectId);
+    })
+  }
+
+  function validateSection(id = 3) {
+
+    $(`[data-formsection]`).attr('data-sectionstatus', '')
+    $(`[data-formstep]`).attr('data-sectionstatus', '')
+    $(`[data-formsection=${id}]`).attr('data-sectionstatus', 'current')
+    $(`[data-formstep=${id}]`).attr('data-sectionstatus', 'current')
+
+    // перешли на новую, проверяем все предыдущие
+    for (let i = 1; i < id; i++) {
+      let valid = validate(`[data-formsection=${i}]`);
+      if (valid) {
+        $(`[data-formsection=${i}]`).attr('data-sectionstatus', 'success')
+        $(`[data-formstep=${i}]`).attr('data-sectionstatus', 'success')
+      } 
+    }
+    
   }
 
   function addSubject() {
@@ -373,8 +411,66 @@ const sporform = (function () {
     
     },
   }
-})()
+})();
 
 $(document).ready(function () {
   sporform.init()
+});
+
+
+$(document).ready(function () {
+  if ($(window).width() > 991) {
+    ;(function () {
+      
+      var a = document.querySelector("#formaside"),
+        b = null 
+      window.addEventListener("scroll", Ascroll, false)
+      document.body.addEventListener("scroll", Ascroll, false) 
+      function Ascroll() {
+        if (b == null) {
+        
+          var Sa = getComputedStyle(a, ""),
+            s = ""
+          for (var i = 0; i < Sa.length; i++) {
+           
+            if (
+              Sa[i].indexOf("overflow") == 0 ||
+              Sa[i].indexOf("padding") == 0 ||
+              Sa[i].indexOf("border") == 0 ||
+              Sa[i].indexOf("outline") == 0 ||
+              Sa[i].indexOf("box-shadow") == 0 ||
+              Sa[i].indexOf("background") == 0
+            ) {
+              s += Sa[i] + ": " + Sa.getPropertyValue(Sa[i]) + "; "
+            }
+          }
+          b = document.createElement("div")
+          b.style.cssText =
+            s + " box-sizing: border-box; width: " + a.offsetWidth + "px;"
+          a.insertBefore(b, a.firstChild) 
+          var l = a.childNodes.length
+          for (var i = 1; i < l; i++) {
+          
+            b.appendChild(a.childNodes[1])
+          }
+          a.style.height = b.getBoundingClientRect().height + "px" 
+          a.style.padding = "0"
+          a.style.border = "0"
+        }
+        if (a.getBoundingClientRect().top <= 30) {
+        
+          b.className = "sticky"
+        } else {
+          b.className = ""
+        }
+        window.addEventListener(
+          "resize",
+          function () {
+            a.children[0].style.width = getComputedStyle(a, "").width
+          },
+          false
+        ) 
+      }
+    })();
+  }
 })
