@@ -65,18 +65,18 @@ const sporform = (function () {
 
         const $depend = $(`[data-depend=${dependvalue}]`)
         const $check = $depend.find('input[type="checkbox"]')
-            console.log(depentype)
+        console.log(depentype)
 
         if ($check.is(":checked")) {
           $input.removeAttr("data-required").removeClass("error")
           $(this).addClass("checked")
-          if (depentype && depentype === 'reverse') {
-            $input.attr("data-required", 'required')
+          if (depentype && depentype === "reverse") {
+            $input.attr("data-required", "required")
           }
         } else {
           $input.attr("data-required", "required")
           $(this).removeClass("checked")
-          if (depentype && depentype === 'reverse') {
+          if (depentype && depentype === "reverse") {
             $input.removeAttr("data-required")
           }
         }
@@ -84,8 +84,227 @@ const sporform = (function () {
     }
   }
 
-  const selectDepend = () => {
-    // все зависящие поля
+  const subject = {
+    iscredit: [
+      {
+        type: "text",
+        mask: "letnum",
+        name: "sporform_sec3_uid_credit",
+        rules: "data-length='1'",
+        attributes: 'data-required="required"',
+        placeholder: "УИД или номер договора *",
+        order: "0",
+        info: "Скопируйте из кредитной истории",
+      },
+      {
+        type: "text",
+        mask: "summ",
+        name: "sporform_sec3_summ",
+        attributes: "",
+        placeholder: "Сумма",
+        order: "1",
+      },
+      {
+        type: "text",
+        mask: "date",
+        name: "sporform_sec3_date",
+        attributes: "",
+        placeholder: "Дата выдачи",
+        rules: "data-length='10'",
+        order: "2",
+      },
+      {
+        type: "text",
+        mask: "letters",
+        name: "sporform_sec3_bank",
+        attributes: "",
+        placeholder: "Источник *",
+        attributes: 'data-required="required"',
+
+        rules: "data-length='1'",
+        order: "3",
+        info: "Организация, которая выдала кредит",
+      },
+      {
+        type: "text",
+        mask: "inn",
+        name: "sporform_sec3_inn",
+        attributes: "",
+        placeholder: "ИНН источника *",
+        attributes: 'data-required="required"',
+
+        rules: "data-length='10'",
+        order: "4",
+        info: "ИНН организации, которая выдала кредит",
+      },
+    ],
+    isrequest: [
+      {
+        type: "text",
+        mask: "letnum",
+        name: "sporform_sec3_uid_credit",
+        rules: "data-length='1'",
+        attributes: 'data-required="required"',
+        placeholder: "УИД или номер договора *",
+        order: "0",
+        info: "Скопируйте из кредитной истории",
+      },
+      {
+        type: "text",
+        mask: "date",
+        name: "sporform_sec3_date2",
+        attributes: 'data-required="required"',
+        placeholder: "Дата обращения *",
+        rules: "data-length='10'",
+        order: "1",
+      },
+      {
+        type: "text",
+        mask: "letters",
+        name: "sporform_sec3_bank",
+        attributes: "",
+        placeholder: "Источник *",
+        attributes: 'data-required="required"',
+
+        rules: "data-length='1'",
+        order: "3",
+        info: "Организация, которая выдала кредит",
+      },
+      {
+        type: "text",
+        mask: "inn",
+        name: "sporform_sec3_inn",
+        attributes: "",
+        placeholder: "ИНН источника *",
+        attributes: 'data-required="required"',
+
+        rules: "data-length='10'",
+        order: "4",
+        info: "ИНН организации, которая выдала кредит",
+      },
+    ],
+    ishistory: [
+      {
+        type: "text",
+        mask: "date",
+        name: "sporform_sec3_date2",
+        attributes: 'data-required="required"',
+        placeholder: "Дата запроса *",
+        rules: "data-length='10'",
+        order: "1",
+      },
+      {
+        type: "text",
+        mask: "letters",
+        name: "sporform_sec3_user",
+        attributes: 'data-required="required"',
+        placeholder: "Пользователь *",
+        rules: "data-length='10'",
+        order: "2",
+      },
+    ],
+  }
+
+  const createInput = (params) => {
+    const isinfo =
+      params.info && params.info.length
+        ? `<div class="inputinfo">${params.info}</div>`
+        : ""
+
+    const newinput = `
+      <div class="sporform__field"  style="order: ${params.order}">
+        <div class="v5input sporform__input">
+          <input type="${params.type}" data-mask='${params.mask}' value="" name="${params.name}" ${params.rules}' ${params.attributes}>
+          <span class="placeholder">${params.placeholder}</span>
+          ${isinfo}
+        </div>
+      </div>
+    `
+
+    return newinput
+  }
+
+  const subjSelect = {
+    subject: "isreason",
+    id: "sporform_sec3_reason",
+    name: "sporform_sec3_reason",
+    placeholder: "Причина оспаривания *",
+    order: 10,
+    options: {
+      iscredit: [
+        {
+          title: "Я не оформлял кредит (займ)",
+          value: "isnotme",
+        },
+        {
+          title: "Кредит (займ) полностью погашен",
+          value: "isclosed",
+        },
+        {
+          title: "Данные о просрочках указаны неверно",
+          value: "isdatawrong",
+        },
+        {
+          title: "Я официально признан банкротом",
+          value: "isbankrot",
+        },
+      ],
+      isrequest: [
+        {
+          title: "Заявку на оформление кредита я не подавал",
+          value: "isnotmyrequest",
+        },
+      ],
+      ishistory: [
+        {
+          title: "Согласие на получение кредитной истории я не давал",
+          value: "isnotmyhistory",
+        },
+      ],
+    },
+  }
+
+  const createSelect = (params, id) => {
+    let options = ""
+    params.options[id].forEach((item) => {
+      options += ` <option value="${item.value}">${item.title}</option>`
+    })
+    const newselect = `
+     <div class="sporform__field" style="order: ${params.order}">
+      <div class="v5input sporform__input" data-dependselect="${params.subject}">
+        <div class="calcform__item calcform__item_select">
+          <div class="calcform__input">
+            <div class="calcform__select ">
+              <select name="${params.name}" id="${params.id}">
+               ${options}
+              </select>
+            </div>
+          </div>
+        </div>
+        <span class="placeholder">${params.placeholder}</span>
+      </div>
+    </div>`
+    return newselect
+  }
+
+  const changeSet = (id, block) => {
+    const $depend = $(`[data-dependselect=${id}]`)
+    const $select = $depend.find("select")
+    const selval = $select.val()
+
+    $(block).html("")
+    if (selval && subject[selval]) {
+      subject[selval].forEach((item) => {
+        const newinput = createInput(item)
+
+        $(block).append(newinput)
+      })
+    }
+    const newselect = createSelect(subjSelect, selval)
+    $(block).append(newselect)
+  }
+
+  function selectDepend() {
     const $dependon = $("[data-dependselect-on]")
 
     if ($dependon.length) {
@@ -96,16 +315,20 @@ const sporform = (function () {
         const $select = $depend.find("select")
         // значение
         const selval = $select.val()
-        $(`[data-dependselect-on=${dependvalue}] input`).removeAttr("data-required")
-        $(`[data-selectvalue=${selval}] input`).attr(
-          "data-required",
-          "required"
-        )
+
+        const $input = $(`[data-selectvalue=${selval}] input`)
+
+        const isreq = $input.data("notrequired")
+
+        if (!isreq || !isreq.length) {
+          $(`[data-dependselect-on=${dependvalue}] input`).removeAttr(
+            "data-required"
+          )
+          $input.attr("data-required", "required")
+        }
 
         $(`[data-dependselect-on=${dependvalue}]`).hide()
         $(`[data-selectvalue=${selval}]`).show()
-
-
       })
     }
   }
@@ -121,17 +344,17 @@ const sporform = (function () {
     return valid
   }
 
-  const validate = (selector = 'form') => {
+  const validate = (selector = "form") => {
     let valid = 1
-    const $req = $(`${selector} [data-required="required"]`);
+    const $req = $(`${selector} [data-required="required"]`)
 
-    $req.each(function() {
+    $req.each(function () {
       valid *= validateInput($(this))
     })
     return valid
   }
 
-  const listenersInit = () => {
+  function listenersInit() {
     $(document).on("change", "[data-depend]", function (e) {
       checkDepend()
       // validate()
@@ -165,31 +388,29 @@ const sporform = (function () {
       e.preventDefault()
       addSubject()
     })
-    $(document).on("focus", '[data-formsection]', function (e) {
+    $(document).on("focus", "[data-formsection]", function (e) {
       e.preventDefault()
       e.stopPropagation()
-      const isSection = $(this).attr('data-formsection');
-      const sectId = isSection ? isSection : $(this).closest('data-formsection');
-      validateSection(sectId);
+      const isSection = $(this).attr("data-formsection")
+      const sectId = isSection ? isSection : $(this).closest("data-formsection")
+      validateSection(sectId)
     })
   }
 
   function validateSection(id = 3) {
-
-    $(`[data-formsection]`).attr('data-sectionstatus', '')
-    $(`[data-formstep]`).attr('data-sectionstatus', '')
-    $(`[data-formsection=${id}]`).attr('data-sectionstatus', 'current')
-    $(`[data-formstep=${id}]`).attr('data-sectionstatus', 'current')
+    $(`[data-formsection]`).attr("data-sectionstatus", "")
+    $(`[data-formstep]`).attr("data-sectionstatus", "")
+    $(`[data-formsection=${id}]`).attr("data-sectionstatus", "current")
+    $(`[data-formstep=${id}]`).attr("data-sectionstatus", "current")
 
     // перешли на новую, проверяем все предыдущие
     for (let i = 1; i < id; i++) {
-      let valid = validate(`[data-formsection=${i}]`);
+      let valid = validate(`[data-formsection=${i}]`)
       if (valid) {
-        $(`[data-formsection=${i}]`).attr('data-sectionstatus', 'success')
-        $(`[data-formstep=${i}]`).attr('data-sectionstatus', 'success')
-      } 
+        $(`[data-formsection=${i}]`).attr("data-sectionstatus", "success")
+        $(`[data-formstep=${i}]`).attr("data-sectionstatus", "success")
+      }
     }
-    
   }
 
   function addSubject() {
@@ -295,10 +516,9 @@ const sporform = (function () {
           </div><!-- /.sporform__field -->
         </div>
       </div>
-    `);
+    `)
 
     reinit($(".calcform__select:not(.calcform__select_initialized)"))
-  
   }
 
   function initSelect(selector) {
@@ -342,8 +562,13 @@ const sporform = (function () {
                 .closest(".calcform__select")
                 .find("select")
                 .val($(this).attr("datavalue"))
-
-              selectDepend()
+             
+              if (
+                $(this).closest(".sporform__input").data("dependselect") === 'issubject'
+              ) {
+                changeSet("issubject", "[data-block='jsfields']")
+              }
+              reinit($(".calcform__select:not(.calcform__select_initialized)"));
             },
           },
         })
@@ -405,39 +630,35 @@ const sporform = (function () {
   function reinit(selector) {
     maskInit()
     initSelect(selector)
-    listenersInit();
-    selectDepend();
+    listenersInit()
+    selectDepend()
   }
 
   return {
     validate,
     init: function () {
-      reinit($(".calcform__select"))
-    
+      changeSet("issubject", "[data-block='jsfields']")
+      reinit($(".calcform__select:not(.calcform__select_initialized)"))
     },
   }
-})();
+})()
 
 $(document).ready(function () {
   sporform.init()
-});
-
+})
 
 $(document).ready(function () {
   if ($(window).width() > 991) {
     ;(function () {
-      
       var a = document.querySelector("#formaside"),
-        b = null 
+        b = null
       window.addEventListener("scroll", Ascroll, false)
-      document.body.addEventListener("scroll", Ascroll, false) 
+      document.body.addEventListener("scroll", Ascroll, false)
       function Ascroll() {
         if (b == null) {
-        
           var Sa = getComputedStyle(a, ""),
             s = ""
           for (var i = 0; i < Sa.length; i++) {
-           
             if (
               Sa[i].indexOf("overflow") == 0 ||
               Sa[i].indexOf("padding") == 0 ||
@@ -452,18 +673,16 @@ $(document).ready(function () {
           b = document.createElement("div")
           b.style.cssText =
             s + " box-sizing: border-box; width: " + a.offsetWidth + "px;"
-          a.insertBefore(b, a.firstChild) 
+          a.insertBefore(b, a.firstChild)
           var l = a.childNodes.length
           for (var i = 1; i < l; i++) {
-          
             b.appendChild(a.childNodes[1])
           }
-          a.style.height = b.getBoundingClientRect().height + "px" 
+          a.style.height = b.getBoundingClientRect().height + "px"
           a.style.padding = "0"
           a.style.border = "0"
         }
         if (a.getBoundingClientRect().top <= 30) {
-        
           b.className = "sticky"
         } else {
           b.className = ""
@@ -474,8 +693,8 @@ $(document).ready(function () {
             a.children[0].style.width = getComputedStyle(a, "").width
           },
           false
-        ) 
+        )
       }
-    })();
+    })()
   }
 })

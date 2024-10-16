@@ -1,0 +1,100 @@
+.partners-index .image {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.partners-index .image img {
+  max-height: 100%;  
+  width: initial;
+}
+.item-views.news .image {
+  display: flex;
+  /*height: 240px;*/
+  align-items: center;
+}
+.item-views.news .image img {
+  max-height: 100%;
+  width: initial;
+}
+.uslugi2.projects-container .service-content .h4 a {
+  color: #000;
+  text-decoration: none;
+}
+.uslugi2.projects-container .service-content .h4 a:hover {
+   text-decoration: underline;
+}
+.uslugi2.projects-container .service-content {
+  min-height: 130px !important;
+}
+
+
+.related__items .service-content .h4 a {
+  color: #000;
+  text-decoration: none;
+}
+.related__items  .service-content .h4 a:hover {
+   text-decoration: underline;
+}
+.related__items  .service-alt a.img-hover {
+  min-height: 211px;
+  display: flex;
+    align-items: center;
+}
+.detailslider__slide a {
+  display: block;
+  margin: 15px;
+  border: 2px solid #999;
+}
+.menu > li > a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu > li > a[href="/sale/"] {
+  background-image: url("/bitrix/templates/af.startlight/img/tag_11509636 1.svg");
+  background-repeat: no-repeat;
+  background-position:left center;
+  padding-left: 32px;
+
+}
+.detailslider__wrapper {
+  position: relative;
+  padding:  0 20px;
+}
+.detailslider__arrow_left  {
+  left: 0;
+  position: absolute;
+  top: calc(50%);
+  cursor: pointer;
+}
+.detailslider__arrow_right  {
+  right: 0;
+  position: absolute;
+  top: calc(50%);
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.related .service-alt {
+  min-height: 300px;
+}
+/* .productlist.related .related__items .service-alt a.img-hover {display:none;} */
+.productlist.related .related__items .service-content .h4  {
+  min-height: unset;
+}
+.productlist.related .related__items .service-content .h4 a {
+  border: none !important;
+
+}
+
+.productlist.related .service-alt{min-height:220px}
+
+.section-description h2, 
+.section-description .h2 {
+    line-height: 120%;
+    font-size: 16px;
+}
+.breadcrumb {white-space: normal !important;}
+.breadcrumb > li {display: inline !important;}
+.breadcrumb span {font-size: 12px;}

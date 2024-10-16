@@ -923,22 +923,22 @@
                             data-required='required'>
                           <span class="placeholder">Фамилия *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field">
                         <div class="v5input sporform__input">
                           <input type="text" data-mask='letters' value="" name="sporform_sec1_name2"
                             data-required='required' data-length='2'>
                           <span class="placeholder">Имя *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field" data-depend-on='isname3'>
                         <div class="v5input sporform__input">
                           <input type="text" data-mask='letters' value="" name="sporform_sec1_name3"
                             data-required='required' data-length='2'>
                           <span class="placeholder">Отчество *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field" data-depend='isname3'>
+                      </div>
+                      <div class="sporform__field mb-32 sm-mb-20" data-depend='isname3'>
                         <div class="v5input sporform__input v5input_noph">
                           <div class="check-block check-block_big ">
                             <input name="isname3" id="isname3" value="isname3" type="checkbox" class="inputcheckbox n2">
@@ -947,14 +947,14 @@
                             </label>
                           </div>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field">
                         <div class="v5input sporform__input">
                           <input type="text" data-mask='date' value="" name="sporform_sec1_bdate"
                             data-required='required' data-length='10'>
                           <span class="placeholder">Дата рождения *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field">
                         <div class="v5input sporform__input" data-dependmask="isdoc">
                           <div class="calcform__item calcform__item_select">
@@ -984,14 +984,14 @@
 
                           <span class="placeholder">Удостоверение личности *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field"  data-dependmask='ispassport'>
                         <div class="v5input sporform__input">
                           <input type="text" data-mask='passport' value="" name="sporform_sec1_passp1"
                             data-required='required' data-length='11'>
                           <span class="placeholder">Серия и номер документа *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                    
                       <div class="sporform__field" data-depend='ismoredoc'>
                         <div class="v5input sporform__input v5input_noph">
@@ -1003,14 +1003,14 @@
                             </label>
                           </div>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field" data-depend-on='ismoredoc' data-dependtype="reverse">
                         <div class="v5input sporform__input">
                           <input type="text" data-mask='passport' value="" name="sporform_sec1_moredoc"
                              data-length='11'>
                           <span class="placeholder">Предыдущий паспорт</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                     </div><!-- /.sporform__fields -->
                   </div><!-- /.sporform__section -->
                   <div class="sporform__section" data-formsection='2' data-sectionstatus=''>
@@ -1021,14 +1021,14 @@
                           <input type="text" data-mask='phone' value="" name="sporform_sec2_phone" data-length='12'>
                           <span class="placeholder">Телефон</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
                       <div class="sporform__field">
                         <div class="v5input sporform__input">
                           <input type="text" data-mask='email' value="" name="sporform_sec2_email" data-length='6'
                             data-required="required">
                           <span class="placeholder">Электронная почта *</span>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
 
                     </div><!-- /.sporform__fields -->
                   </div><!-- /.sporform__section -->
@@ -1054,33 +1054,69 @@
 
                             <span class="placeholder">Предмет оспаривания *</span>
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
 
-                        <div class="sporform__field">
+
+                        <div class="sporform__jsfields" data-block='jsfields'>
+
+                        </div><!-- /.sporform__jsfields -->
+<!-- 
+                        <div class="sporform__field" data-dependselect-on="issubject" data-selectvalue='iscredit'>
                           <div class="v5input sporform__input">
-                            <input type="text" data-mask='letnum' value="" name="sporform_sec3_uid" data-length='1'
+                            <input type="text" data-mask='letnum' value="" name="sporform_sec3_uid_credit" data-length='1'
                               data-required="required">
                             <span class="placeholder">УИД или номер договора *</span>
                             <div class="inputinfo">Скопируйте из кредитной истории</div>
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
 
-                        <div class="sporform__field">
+                        <div class="sporform__field" data-dependselect-on="issubject" data-selectvalue='iscredit'>
                           <div class="v5input sporform__input">
-                            <input type="text" data-mask='summ' value="" name="sporform_sec3_uid" data-length='1'
-                              data-required="required">
-                            <span class="placeholder">Сумма *</span>
+                            <input type="text" data-mask='summ' value="" name="sporform_sec3_summ" data-length='1' data-notrequired='notrequired'
+                              >
+                            <span class="placeholder">Сумма </span>
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
 
-                        <div class="sporform__field">
+                        <div class="sporform__field" data-dependselect-on="issubject" data-selectvalue='iscredit'>
                           <div class="v5input sporform__input">
                             <input type="text" data-mask='date' value="" name="sporform_sec3_date"
-                              data-required='required' data-length='10'>
-                            <span class="placeholder">Дата выдачи *</span>
+                              data-length='10'>
+                            <span class="placeholder">Дата выдачи</span>
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
 
+                        <div class="sporform__field" data-dependselect-on="issubject" data-selectvalue='isrequest'>
+                          <div class="v5input sporform__input">
+                            <input type="text" data-mask='letnum' value="" name="sporform_sec3_uid_request" data-length='1'
+                              data-required="required">
+                            <span class="placeholder">УИД или номер договора *</span>
+                            <div class="inputinfo">Скопируйте из кредитной истории</div>
+                          </div>
+                        </div>
+
+                        <div class="sporform__field" data-dependselect-on="issubject" data-selectvalue='isrequest'>
+                          <div class="v5input sporform__input">
+                            <input type="text" data-mask='date' value="" name="sporform_sec3_date2"
+                              data-length='10' data-required="required">
+                            <span class="placeholder">Дата обращения *</span>
+                          </div>
+                        </div>
+                        <div class="sporform__field" data-dependselect-on="issubject" data-selectvalue='ishistory'>
+                          <div class="v5input sporform__input">
+                            <input type="text" data-mask='date' value="" name="sporform_sec3_date3"
+                              data-length='10' data-required="required">
+                            <span class="placeholder">Дата запроса *</span>
+                          </div>
+                        </div>
+                        <div class="sporform__field"  data-dependselect-on="issubject" data-selectvalue='ishistory'>
+                          <div class="v5input sporform__input">
+                            <input type="text" data-mask='letters' value="" name="sporform_sec3_user" data-length='1'
+                              data-required="required">
+                            <span class="placeholder">Пользователь *</span>
+
+                          </div>
+                        </div>
                         <div class="sporform__field">
                           <div class="v5input sporform__input">
                             <input type="text" data-mask='letters' value="" name="sporform_sec3_bank" data-length='1'
@@ -1089,7 +1125,8 @@
                             <div class="inputinfo">Организация, которая выдала кредит</div>
 
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
+                       
                         <div class="sporform__field">
                           <div class="v5input sporform__input">
                             <input type="text" data-mask='inn' value="" name="sporform_sec3_inn" data-length='10'
@@ -1098,14 +1135,15 @@
                             <div class="inputinfo">ИНН организации, которая выдала кредит</div>
 
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div> -->
+                        
 
-                        <div class="sporform__field">
+                       <!--  <div class="sporform__field">
                           <div class="v5input sporform__input" data-dependselect="isreason">
                             <div class="calcform__item calcform__item_select">
                               <div class="calcform__input">
                                 <div class="calcform__select ">
-                                  <select name="sporform_sec3_subject" id="sporform_sec3_reason">
+                                  <select name="sporform_sec3_reason" id="sporform_sec3_reason">
                                     <option value="isnotme">Я не оформлял кредит (займ)</option>
                                     <option value="isclosed">Кредит (займ) полностью погашен</option>
                                     <option value="isdatawrong">Данные о просрочках указаны неверно</option>
@@ -1117,7 +1155,7 @@
 
                             <span class="placeholder">Причина оспаривания *</span>
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div> -->
 
 
                         <div class="sporform__field" data-dependselect-on="isreason" data-selectvalue='isnotme'>
@@ -1131,7 +1169,7 @@
                               </label>
                             </div>
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
 
 
                         <div class="sporform__field" data-dependselect-on="isreason" data-selectvalue='isbankrot'>
@@ -1142,7 +1180,7 @@
                             <div class="inputinfo">Банкроты не имеют активных обязательств</div>
 
                           </div>
-                        </div><!-- /.sporform__field -->
+                        </div>
                       </div>
                     </div>
 
@@ -1154,7 +1192,7 @@
                     
                     <div class="sporform__field" >
                       <a href="" class="addsubject" data-action="addsubject" clas>Добавить еще одно оспаривание</a><!-- /.link -->
-                    </div><!-- /.sporform__field -->
+                    </div>
 
                   </div>
 
@@ -1171,7 +1209,7 @@
                             </label>
                           </div>
                         </div>
-                      </div><!-- /.sporform__field -->
+                      </div>
 
                       <div class="sporform__field sporform__submit">
                         <div class="sporform__button">
@@ -1187,7 +1225,7 @@
                             <!-- /.infslider_v5__text -->
                           </div>
                         </div><!-- /.sporform__submitinfo -->
-                      </div><!-- /.sporform__field -->
+                      </div>
 
 
                     </div><!-- /.sporform__fields -->

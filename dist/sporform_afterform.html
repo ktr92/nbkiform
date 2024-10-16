@@ -896,12 +896,12 @@
     <div class="page">
       <div class="container pagecontent_v5 ">
         <div class="nbki_v4 wrapperwhite wrapperwhite_v5 sporform">
-          <h1>Заявление об оспаривании данных <br> в кредитной истории</h1>
+          <h1>Проверьте ваше заявление <br> об оспаривании данных в кредитной истории</h1>
           <div class="sporform__container">
             <div class="sporform__aside" id='formaside'>
-              <div class="sporform__steps" data-formsteps='sporform' >
+              <div class="sporform__steps" data-formsteps='sporform'>
                 <div class="sporform__step" data-formstep='1' data-sectionstatus='current'>
-                  <div class="sporform__stepstatus " >Персональные данные</div>
+                  <div class="sporform__stepstatus ">Персональные данные</div>
                 </div><!-- /.sporform__step -->
                 <div class="sporform__step" data-formstep='2' data-sectionstatus=''>
                   <div class="sporform__stepstatus ">Контактные данные</div>
@@ -914,285 +914,125 @@
             <div class="sporform__main">
               <div class="sporform__form">
                 <form action="">
-                  <div class="sporform__section" data-formsection='1' data-sectionstatus='current'>
+                  <div class="sporform__section sporform__section_data" data-formsection='1'
+                    data-sectionstatus='current'>
                     <div class="sporform__title">Персональные данные</div>
-                    <div class="sporform__fields">
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name1" data-length='2'
-                            data-required='required'>
-                          <span class="placeholder">Фамилия *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name2"
-                            data-required='required' data-length='2'>
-                          <span class="placeholder">Имя *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field" data-depend-on='isname3'>
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='letters' value="" name="sporform_sec1_name3"
-                            data-required='required' data-length='2'>
-                          <span class="placeholder">Отчество *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field" data-depend='isname3'>
-                        <div class="v5input sporform__input v5input_noph">
-                          <div class="check-block check-block_big ">
-                            <input name="isname3" id="isname3" value="isname3" type="checkbox" class="inputcheckbox n2">
-                            <label for="isname3">
-                              <span>У меня нет отчества</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='date' value="" name="sporform_sec1_bdate"
-                            data-required='required' data-length='10'>
-                          <span class="placeholder">Дата рождения *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input" data-dependmask="isdoc">
-                          <div class="calcform__item calcform__item_select">
-                            <div class="calcform__input">
-                              <div class="calcform__select ">
-                                <select name="sporform_sec1_doc" id="sporform_sec1_doc">
-                                  <option value="ispassport">Паспорт гражданина РФ</option>
-                                  <option value="iszagran">Заграничный паспорт гражданина РФ</option>
-                                  <option value="isdiplom">Дипломатический паспорт</option>
-                                  <option value="ispaspjob">Служебный паспорт</option>
-                                  <option value="ismarine">Удостоверение личности моряка</option>
-                                  <option value="issvo">Удостоверение личности военнослужащего</option>
-                                  <option value="ismilitary">Военный билет</option>
-                                  <option value="isvnzh">Временное удостоверение личности гражданина РФ</option>
-                                  <option value="isborn">Свидетельство о рождении гражданина РФ</option>
-                                  <option value="isrussian">Иное удостоверение личности гражданина РФ</option>
-                                  <option value="isvisitor">Паспорт или иное удостоверение личности иностранца</option>
-                                  <option value="isunknown">Удостоверение личности для лица без гражданства</option>
-                                  <option value="ismigrant">Удостоверение беженца</option>
-                                  <option value="isforced">Удостоверение вынужденного переселенца</option>
-                                  <option value="istemporary">Свидетельство о предоставлении временного убежища в РФ</option>
-                                  <option value="ispassport">Иной документ</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Фамилия, имя, отчество</div>
+                      <div class="sporform__datavalue">Дзодзиков Владислав Александрович</div>
+                    </div><!-- /.sporform__datarow -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Дата рождения</div>
+                      <div class="sporform__datavalue">03.09.1900</div>
+                    </div><!-- /.sporform__datarow -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Паспорт гражданина РФ</div>
+                      <div class="sporform__datavalue">1234 567890</div>
+                    </div><!-- /.sporform__datarow -->
 
-                          <span class="placeholder">Удостоверение личности *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field"  data-dependmask='ispassport'>
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='passport' value="" name="sporform_sec1_passp1"
-                            data-required='required' data-length='11'>
-                          <span class="placeholder">Серия и номер документа *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                   
-                      <div class="sporform__field" data-depend='ismoredoc'>
-                        <div class="v5input sporform__input v5input_noph">
-                          <div class="check-block check-block_big ">
-                            <input name="ismoredoc" id="ismoredoc" value="ismoredoc" type="checkbox"
-                              class="inputcheckbox n2">
-                            <label for="ismoredoc">
-                              <span>Добавить серию и номер предыдущего паспорта</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field" data-depend-on='ismoredoc' data-dependtype="reverse">
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='passport' value="" name="sporform_sec1_moredoc"
-                             data-length='11'>
-                          <span class="placeholder">Предыдущий паспорт</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                    </div><!-- /.sporform__fields -->
                   </div><!-- /.sporform__section -->
                   <div class="sporform__section" data-formsection='2' data-sectionstatus=''>
                     <div class="sporform__title">Контактные данные</div>
-                    <div class="sporform__fields">
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='phone' value="" name="sporform_sec2_phone" data-length='12'>
-                          <span class="placeholder">Телефон</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input">
-                          <input type="text" data-mask='email' value="" name="sporform_sec2_email" data-length='6'
-                            data-required="required">
-                          <span class="placeholder">Электронная почта *</span>
-                        </div>
-                      </div><!-- /.sporform__field -->
-
-                    </div><!-- /.sporform__fields -->
-                  </div><!-- /.sporform__section -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Телефон</div>
+                      <div class="sporform__datavalue">+7 (925) 123-45-67</div>
+                    </div><!-- /.sporform__datarow -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Электронная почта</div>
+                      <div class="sporform__datavalue">vdzodzikov@gmail.com</div>
+                    </div><!-- /.sporform__datarow -->
+                  </div>
                   <div class="sporform__section sporform__section_wrapper">
 
-                  <div class="sporform__section" data-formsection='3' data-sectionstatus=''>
-                    <div class="sporform__title">Предмет оспаривания</div>
-                    <div class="sporform__subsction" data-subsection='1'>
-                      <div class="sporform__fields">
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input" data-dependselect="issubject">
-                            <div class="calcform__item calcform__item_select">
-                              <div class="calcform__input">
-                                <div class="calcform__select ">
-                                  <select name="sporform_sec3_subject" id="sporform_sec3_subject">
-                                    <option value="iscredit">Кредит</option>
-                                    <option value="isrequest">Обращение или заявка</option>
-                                    <option value="ishistory">Кредитная история</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-
-                            <span class="placeholder">Предмет оспаривания *</span>
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input">
-                            <input type="text" data-mask='letnum' value="" name="sporform_sec3_uid" data-length='1'
-                              data-required="required">
-                            <span class="placeholder">УИД или номер договора *</span>
-                            <div class="inputinfo">Скопируйте из кредитной истории</div>
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input">
-                            <input type="text" data-mask='summ' value="" name="sporform_sec3_uid" data-length='1'
-                              data-required="required">
-                            <span class="placeholder">Сумма *</span>
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input">
-                            <input type="text" data-mask='date' value="" name="sporform_sec3_date"
-                              data-required='required' data-length='10'>
-                            <span class="placeholder">Дата выдачи *</span>
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input">
-                            <input type="text" data-mask='letters' value="" name="sporform_sec3_bank" data-length='1'
-                              data-required="required">
-                            <span class="placeholder">Источник *</span>
-                            <div class="inputinfo">Организация, которая выдала кредит</div>
-
-                          </div>
-                        </div><!-- /.sporform__field -->
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input">
-                            <input type="text" data-mask='inn' value="" name="sporform_sec3_inn" data-length='10'
-                              data-required="required">
-                            <span class="placeholder">ИНН источника *</span>
-                            <div class="inputinfo">ИНН организации, которая выдала кредит</div>
-
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-                        <div class="sporform__field">
-                          <div class="v5input sporform__input" data-dependselect="isreason">
-                            <div class="calcform__item calcform__item_select">
-                              <div class="calcform__input">
-                                <div class="calcform__select ">
-                                  <select name="sporform_sec3_subject" id="sporform_sec3_reason">
-                                    <option value="isnotme">Я не оформлял кредит (займ)</option>
-                                    <option value="isclosed">Кредит (займ) полностью погашен</option>
-                                    <option value="isdatawrong">Данные о просрочках указаны неверно</option>
-                                    <option value="isbankrot">Я официально признан банкротом</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-
-                            <span class="placeholder">Причина оспаривания *</span>
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-
-                        <div class="sporform__field" data-dependselect-on="isreason" data-selectvalue='isnotme'>
-                          <div class="v5input sporform__input ">
-                            <div class="check-block check-block_big check-block_bigger">
-                              <input name="isconfirm" checked id="isconfirm" value="isconfirm" type="checkbox"
-                                class="inputcheckbox n2">
-                              <label for="isconfirm">
-                                <span>Оспорить обращение за кредитом <span>Прошу удалить из кредитной истории сведения
-                                    об обращении и об участии в обязательстве УИД 1234567890</span></span>
-                              </label>
-                            </div>
-                          </div>
-                        </div><!-- /.sporform__field -->
-
-
-                        <div class="sporform__field" data-dependselect-on="isreason" data-selectvalue='isbankrot'>
-                          <div class="v5input sporform__input">
-                            <input type="text" data-mask='letnum' value="" name="sporform_sec3_numbankrot"
-                              data-required='required' data-length='1'>
-                            <span class="placeholder">Номер дела о банкротстве *</span>
-                            <div class="inputinfo">Банкроты не имеют активных обязательств</div>
-
-                          </div>
-                        </div><!-- /.sporform__field -->
+                    <div class="sporform__section" data-formsection='3' data-sectionstatus=''>
+                      <div class="sporform__title">Предмет оспаривания</div>
+                      <div class="sporform__subsction " data-subsection='1'>
+                        <div class="sporform__datarow">
+                          <div class=" sporform__datasubject">Кредит</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">УИД обращения или номер договора</div>
+                          <div class="sporform__datavalue">1234567890</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Сумма</div>
+                          <div class="sporform__datavalue">121 823,00</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Дата выдачи</div>
+                          <div class="sporform__datavalue">11.01.2023</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Источник</div>
+                          <div class="sporform__datavalue">АО «Альфа-Банк»</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Причина оспаривания</div>
+                          <div class="sporform__datavalue">Я официально признан банкротом</div>
+                          <div class="sporform__datavalue">Прошу удалить из кредитной истории сведения об обращении и об участии в обязательстве УИД 1234567890.</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Номер дела о банкротстве</div>
+                          <div class="sporform__datavalue">1234567890</div>
+                        </div><!-- /.sporform__datarow -->
+                     
                       </div>
-                    </div>
+                      <div class="sporform__subsction " data-subsection='2'>
+                        <div class="sporform__datarow">
+                          <div class=" sporform__datasubject">Обращение или заявка</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">УИД обращения или номер договора</div>
+                          <div class="sporform__datavalue">1234567890</div>
+                        </div><!-- /.sporform__datarow -->
+                       
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Дата выдачи</div>
+                          <div class="sporform__datavalue">11.01.2023</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Источник</div>
+                          <div class="sporform__datavalue">АО «Альфа-Банк»</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Причина оспаривания</div>
+                          <div class="sporform__datavalue">Я не подавал заявку на оформление кредита</div>
+                        
+                        </div><!-- /.sporform__datarow -->
+                      
+                     
+                      </div>
 
-
-                    
-                    <!-- added -->
-                    <div id='newsubjects'></div>
-
-                    
-                    <div class="sporform__field" >
-                      <a href="" class="addsubject" data-action="addsubject" clas>Добавить еще одно оспаривание</a><!-- /.link -->
-                    </div><!-- /.sporform__field -->
-
-                  </div>
-
-                  <div class="sporform__section" data-formsection='4'>
-                    <div class="sporform__fields">
-                      <div class="sporform__field">
-                        <div class="v5input sporform__input v5input_noph">
-                          <div class="check-block check-block_light">
-                            <input name="formcheck" checked id="formcheck" value="formcheck" type="checkbox"
-                              class="inputcheckbox n2">
-                            <label for="formcheck">
-                              <span>Я ознакомлен с условиями и даю согласие АО «НБКИ» на обработку и использование моих
-                                персональных данных</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div><!-- /.sporform__field -->
-
-                      <div class="sporform__field sporform__submit">
-                        <div class="sporform__button">
-                          <button type='submit' class='btn_main btn_main_v5 '>Отправить заявление</button>
-                        </div><!-- /.sporform__button -->
-                        <div class="sporform__submitinfo">
-                          <div class="infslider_v5__item">
-                            <div class="infslider_v5__image">
-                              <img src="//nbki.ru/local/templates/nbkiv4/public/images/inf3.svg" alt="">
-                            </div><!-- /.infslider_v5__image -->
-                            <div class="infslider_v5__text">АО «НБКИ» гарантирует <br> безопасность ваших данных
+                      <div class="sporform__section" data-formsection='4'>
+                        <div class="sporform__fields">
+                          <div class="sporform__field">
+                            <div class="v5input sporform__input v5input_noph">
+                              <div class="check-block check-block_light">
+                                <input name="formcheck" checked id="formcheck" value="formcheck" type="checkbox"
+                                  class="inputcheckbox n2">
+                                <label for="formcheck">
+                                  <span>Я ознакомлен с условиями и даю согласие АО «НБКИ» на обработку и
+                                    использование моих
+                                    персональных данных</span>
+                                </label>
+                              </div>
                             </div>
-                            <!-- /.infslider_v5__text -->
-                          </div>
-                        </div><!-- /.sporform__submitinfo -->
-                      </div><!-- /.sporform__field -->
+                          </div><!-- /.sporform__field -->
+
+                          <div class="sporform__field sporform__submit">
+                            <div class="sporform__button">
+                              <button type='submit' class='btn_main btn_main_v5 '>Отправить заявление</button>
+                            </div><!-- /.sporform__button -->
+                            <div class="sporform__button">
+                              <a href='#' class='btn_main btn_main_v5 btn_main_border_v5 '>Отредактировать</a>
+                            </div><!-- /.sporform__button -->
+                           
+                          </div><!-- /.sporform__field -->
 
 
-                    </div><!-- /.sporform__fields -->
-                  </div><!-- /.sporform__section -->
-                </div><!-- /.sporform__section sporform__section_wrapper -->
+                        </div><!-- /.sporform__fields -->
+                      </div><!-- /.sporform__section -->
+                    </div><!-- /.sporform__section sporform__section_wrapper -->
 
                 </form>
               </div><!-- /.sporform__form -->
