@@ -1036,17 +1036,17 @@
 
                   <div class="sporform__section" data-formsection='3' data-sectionstatus=''>
                     <div class="sporform__title">Предмет оспаривания</div>
-                    <div class="sporform__subsction" data-subsection='1'>
+                    <div class="sporform__subsction" data-subsection='1'  data-sectionid='subject__number_1'>
                       <div class="sporform__fields">
                         <div class="sporform__field">
-                          <div class="v5input sporform__input" data-dependselect="issubject">
+                          <div class="v5input sporform__input" data-dependselect="issubject__number_1" data-hasdepend='1'>
                             <div class="calcform__item calcform__item_select">
                               <div class="calcform__input">
                                 <div class="calcform__select ">
                                   <select name="sporform_sec3_subject" id="sporform_sec3_subject">
-                                    <option value="iscredit">Кредит</option>
-                                    <option value="isrequest">Обращение или заявка</option>
-                                    <option value="ishistory">Кредитная история</option>
+                                    <option value="iscredit__number_1">Кредит</option>
+                                    <option value="isrequest__number_1">Обращение или заявка</option>
+                                    <option value="ishistory__number_1">Кредитная история</option>
                                   </select>
                                 </div>
                               </div>
@@ -1158,7 +1158,7 @@
                         </div> -->
 
 
-                        <div class="sporform__field" data-dependselect-on="isreason" data-selectvalue='isnotme'>
+                        <div class="sporform__field" data-dependselect-on="isreason__number_1" data-selectvalue='isnotme__number_1'>
                           <div class="v5input sporform__input ">
                             <div class="check-block check-block_big check-block_bigger">
                               <input name="isconfirm" checked id="isconfirm" value="isconfirm" type="checkbox"
@@ -1172,13 +1172,18 @@
                         </div>
 
 
-                        <div class="sporform__field" data-dependselect-on="isreason" data-selectvalue='isbankrot'>
+                        <div class="sporform__field" data-dependselect-on="isreason__number_1" data-selectvalue='isbankrot__number_1'>
                           <div class="v5input sporform__input">
                             <input type="text" data-mask='letnum' value="" name="sporform_sec3_numbankrot"
                               data-required='required' data-length='1'>
                             <span class="placeholder">Номер дела о банкротстве *</span>
                             <div class="inputinfo">Банкроты не имеют активных обязательств</div>
 
+                          </div>
+                        </div>
+                        <div class="sporform__field sporform__field_right">
+                          <div class="v5input sporform__input">
+                              <a href="#" data-remove='subject__number_1'>Удалить это оспаривание</a>
                           </div>
                         </div>
                       </div>
@@ -1191,7 +1196,7 @@
 
                     
                     <div class="sporform__field" >
-                      <a href="" class="addsubject" data-action="addsubject" clas>Добавить еще одно оспаривание</a><!-- /.link -->
+                      <a href="" class="addsubject" data-action="addsubject" >Добавить новое оспаривание</a><!-- /.link -->
                     </div>
 
                   </div>
@@ -2218,61 +2223,62 @@
     <img src="//nbki.ru/images/totop.svg" alt="">
   </button>
 
-
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      $('[data-content="forgot"]').html(`Если вы забыли логин или пароль,<br>
-     направьте запрос на электронный адрес <a href="//nbki.rumailto:SD@nbki.ru">SD@nbki.ru</a>`)
-      $('[data-content="cookie"]').html(`На сайте АО&nbsp;«НБКИ» используются файлы cookie (данные о&nbsp;вашем IP-адресе, стране, дате и&nbsp;времени посещения, типе браузера и&nbsp;операционной системы, модели и&nbsp;типе мобильного устройства) для повышения удобства пользователей, совершенствования качества предоставляемых сервисов. Оставаясь на&nbsp;<a href="//nbki.ru/" target="_blank">nbki.ru</a>, вы соглашаетесь с&nbsp;<a href="//nbki.ru/privacy_rules/"  target="_blank">пользовательским&nbsp;соглашением</a> и&nbsp;обработкой указанных выше данных.`)
-    })
-
-
-
+    
+$(document).ready(function () {
+  if ($(window).width() > 991) {
+    ;(function () {
+      var a = document.querySelector("#formaside"),
+        b = null
+      window.addEventListener("scroll", Ascroll, false)
+      document.body.addEventListener("scroll", Ascroll, false)
+      function Ascroll() {
+        if (b == null) {
+          var Sa = getComputedStyle(a, ""),
+            s = ""
+          for (var i = 0; i < Sa.length; i++) {
+            if (
+              Sa[i].indexOf("overflow") == 0 ||
+              Sa[i].indexOf("padding") == 0 ||
+              Sa[i].indexOf("border") == 0 ||
+              Sa[i].indexOf("outline") == 0 ||
+              Sa[i].indexOf("box-shadow") == 0 ||
+              Sa[i].indexOf("background") == 0
+            ) {
+              s += Sa[i] + ": " + Sa.getPropertyValue(Sa[i]) + "; "
+            }
+          }
+          b = document.createElement("div")
+          b.style.cssText =
+            s + " box-sizing: border-box; width: " + a.offsetWidth + "px;"
+          a.insertBefore(b, a.firstChild)
+          var l = a.childNodes.length
+          for (var i = 1; i < l; i++) {
+            b.appendChild(a.childNodes[1])
+          }
+          a.style.height = b.getBoundingClientRect().height + "px"
+          a.style.padding = "0"
+          a.style.border = "0"
+        }
+        if (a.getBoundingClientRect().top <= 30) {
+          b.className = "sticky"
+        } else {
+          b.className = ""
+        }
+        window.addEventListener(
+          "resize",
+          function () {
+            a.children[0].style.width = getComputedStyle(a, "").width
+          },
+          false
+        )
+      }
+    })()
+  }
+});
   </script>
 
-  <script>
-    document.querySelectorAll('.dropdown').forEach(function (item) {
-      item.addEventListener('click', event => {
 
-        if (event.target.classList.contains('dropdown__label')) {
-          if (item.querySelector('.dropdown__menu').classList.contains('active')) {
-            item.querySelector('.dropdown__menu').classList.remove('active')
-            item.querySelector('.dropdown__label').classList.remove('active')
-          } else {
-            item.querySelector('.dropdown__menu').classList.add('active')
-            event.target.classList.add('active')
-          }
-
-        } else if (event.target.tagName.toLowerCase() == 'li') {
-          if (item.querySelector('li.selected')) {
-            item.querySelector('li.selected').classList.remove('selected')
-          }
-
-          event.target.classList.add('selected')
-          item.querySelector('.dropdown__label').classList.remove('active')
-          item.querySelector('.dropdown__label').textContent = event.target.textContent
-          item.querySelector('.dropdown_value').value = event.target.textContent
-          item.querySelector('.dropdown__menu').classList.remove('active')
-        }
-      })
-    })
-
-
-
-    window.onclick = function (event) {
-      var dropdown = document.querySelectorAll('.dropdown__label.active')
-      dropdown.forEach(function (drop) {
-        if (event.target != drop) {
-          document.querySelectorAll('.dropdown__menu.active').forEach(function (item) {
-            item.classList.remove('active')
-          })
-          document.querySelectorAll('.dropdown__label.active').forEach(function (item) {
-            item.classList.remove('active')
-          })
-        }
-      })
-    }
-  </script>
   <script src="//nbki.ru/calculator/js/jquery.inputmask.min.js?1695372028143825"></script>
 
   <script src="js/sporform.js"></script>
