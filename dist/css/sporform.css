@@ -465,10 +465,10 @@ max-width: 645px;
   display: flex;
   justify-content: flex-end;
 }
-[data-remove] {
+[data-toremove] {
   color: red;
 }
-[data-remove] {
+[data-toremove] {
 display: none;
   font-weight: 400;
 font-size: 14px;
@@ -485,7 +485,7 @@ background-repeat: no-repeat;
   padding-left: 40px;
 }
 
-[data-remove].active {
+[data-toremove].active {
   display: inline-block;
 }
 
@@ -503,6 +503,32 @@ background-repeat: no-repeat;
   background-color: #7B7794;
   border: 1px solid #7B7794;
 }
+.modal_confirmation .modal-dialog {
+  width: 412px;
+}
+.modal_confirmation .modal-content {
+  padding: 32px;
+}
+.modal__onetitle {
+  font-weight: 500;
+font-size: 20px;
+line-height: 125%;
+letter-spacing: -0.01em;
+text-align: center;
+margin-bottom: 32px;
+}
+.modal__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:20px;
+  padding: 0 20px;
+}
+
+.modal__buttons * {
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   .nbki_v4.wrapperwhite.wrapperwhite_v5 {
     padding-bottom: 20px;

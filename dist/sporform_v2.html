@@ -1183,7 +1183,7 @@
                         </div>
                         <div class="sporform__field sporform__field_right">
                           <div class="v5input sporform__input">
-                              <a href="#" data-remove='subject__number_1'>Удалить это оспаривание</a>
+                              <a href="#myModal_confirmation" data-toggle="modal" data-toremove='subject__number_1'>Удалить это оспаривание</a>
                           </div>
                         </div>
                       </div>
@@ -2305,55 +2305,21 @@
     </div>
   </div>
 
-  <!-- Обратная связь ty -->
-  <div id="myModal_ty" class="modal modalty fade">
+
+  <div id="myModal_confirmation" class="modal modal_confirmation fade">
     <div class="modal-dialog modal-dialog_login">
       <div class="modal-content">
-        <span class="modalclose" data-dismiss="modal" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 15L15 1" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round" />
-            <path d="M1 1L15 15" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round" />
-          </svg>
-
-        </span>
+       
         <div class="modal-body">
-          <div class="modal_zvonok_content">
-            <div class="modalty__title">Ваше обращение принято!</div>
-            <div class="modalty__text">Ответ будет направлен на указанную электронную почту в течение 1 (одного)
-              рабочего дня.</div>
-
-          </div>
+          <div class="modal__onetitle">Вы уверены, что хотите удалить оспаривание из заявления?</div>
+          <div class="modal__buttons">
+            <span class="btn_main btn_main_v5" data-dismiss="modal" >Оставить</span>
+            <span class="btn_main btn_main_v5" data-remove=''>Удалить</span>
+          </div><!-- /.modal__buttons -->
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Контакты ty -->
-  <div id="myModal_tyform" class="modal tyform fade">
-    <div class="modal-dialog modal-dialog_login">
-      <div class="modal-content">
-        <!--  <span class="modalclose" data-dismiss="modal" aria-hidden="true">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 15L15 1" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round"/>
-      <path d="M1 1L15 15" stroke="#AEB5D1" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-
-      </span> -->
-        <div class="modal-body">
-          <div class="modal_zvonok_content">
-            <div class="modalty__title">Спасибо!</div>
-            <div class="modalty__text">Ваше сообщение <br> успешно отправлено</div>
-            <div class="modalty__button">
-              <a href="//nbki.ru#" data-dismiss="modal" class="btn_main">Закрыть</a>
-            </div><!-- /.modalty__button -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button onclick='window.scrollTo({top: 0, behavior: "smooth"});' class="totop">
-    <img src="//nbki.ru/images/totop.svg" alt="">
-  </button>
 
   <script>
     

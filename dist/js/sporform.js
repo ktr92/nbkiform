@@ -269,7 +269,6 @@ const sporform = (function () {
   }
 
   const createSelect = (params, id) => {
-    console.log(params)
     let options = ""
     params.options[id].forEach((item) => {
       options += ` <option value="${item.value}">${item.title}</option>`
@@ -296,7 +295,6 @@ const sporform = (function () {
     const $depend = $(`[data-dependselect=${id}]`)
     const $select = $depend.find("select")
     const selval = $select.val()
-    console.log(id)
 
     $(block).html("")
     if (selval && subject[`subject__number_${subcount}`][selval]) {
@@ -367,15 +365,16 @@ const sporform = (function () {
 
   function removeSubject(id) {
     const $section = $(`[data-sectionid=${id}]`)
+    console.log(id)
+
       if ($section.length && Object.keys(subject).length > 1) {
         $section.remove()
         delete subject[id]
         delete subjSelect[id]
-
         
       }
       if (Object.keys(subject).length < 2) {
-        $('[data-remove]').removeClass('active') 
+        $('[data-toremove]').removeClass('active') 
        }
   }
 
@@ -404,8 +403,20 @@ const sporform = (function () {
       const isSection = $(this).attr("data-formsection")
       const sectId = isSection ? isSection : $(this).closest("data-formsection")
       validateSection()
+    });
+    toRemoveInit();
+   
+  }
+
+  function toRemoveInit() {
+    $(document).on("click", "[data-remove]", function (e) {
+      e.preventDefault()
+      const id = $(this).data("remove")
+      removeSubject(id)
+      $('.modal').modal('hide')
     })
   }
+
   function listenersInit() {
     $(document).on("change", "[data-depend]", function (e) {
       checkDepend()
@@ -434,12 +445,15 @@ const sporform = (function () {
       }
     })
 
-    $(document).on("focus", "[data-remove]", function (e) {
-      e.preventDefault()
-      const id = $(this).data("remove")
+  
+    $(document).on("click", "[data-toremove]", function (e) {
+      const id = $(this).data("toremove")      
+      $('[data-remove]').attr('data-remove', id)
 
-      removeSubject(id)
+
     })
+
+   
   }
 
   function validateSection(id = 3) {
@@ -554,7 +568,7 @@ const sporform = (function () {
 
           <div class="sporform__field sporform__field_right">
                           <div class="v5input sporform__input">
-                              <a href="#" data-remove='subject__number_${subcount}'>Удалить это оспаривание</a>
+                              <a href="#myModal_confirmation" data-toggle="modal" data-toremove='subject__number_${subcount}'>Удалить это оспаривание</a>
                           </div>
                         </div>
        </div>
@@ -583,7 +597,7 @@ const sporform = (function () {
     reinit($(".calcform__select:not(.calcform__select_initialized)"))
 
     if (Object.keys(subject).length > 1) {
-      $("[data-remove]").removeClass("active").addClass("active")
+      $("[data-toremove]").removeClass("active").addClass("active")
     }
   }
 
