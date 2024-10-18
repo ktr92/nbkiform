@@ -912,7 +912,7 @@
               </div><!-- /.sporform__steps -->
             </div><!-- /.sporform__aside -->
             <div class="sporform__main">
-              <div class="sporform__form">
+              <div class="sporform__form active" data-formpage='1'>
                 <form action="">
                   <div class="sporform__section" data-formsection='1' data-sectionstatus='current'>
                     <div class="sporform__title">Персональные данные</div>
@@ -1018,7 +1018,7 @@
                     <div class="sporform__fields">
                       <div class="sporform__field">
                         <div class="v5input sporform__input">
-                          <input type="text" data-mask='phone' value="" name="sporform_sec2_phone" data-length='12'>
+                          <input type="text" data-mask='phone' value="" name="sporform_sec2_phone" data-length='15'>
                           <span class="placeholder">Телефон</span>
                         </div>
                       </div>
@@ -1206,7 +1206,7 @@
                       <div class="sporform__field">
                         <div class="v5input sporform__input v5input_noph">
                           <div class="check-block check-block_light">
-                            <input name="formcheck" checked id="formcheck" value="formcheck" type="checkbox"
+                            <input name="formcheck"  id="formcheck" value="formcheck" type="checkbox"
                               class="inputcheckbox n2">
                             <label for="formcheck">
                               <span>Я ознакомлен с условиями и даю согласие АО «НБКИ» на обработку и использование моих
@@ -1218,7 +1218,7 @@
 
                       <div class="sporform__field sporform__submit">
                         <div class="sporform__button">
-                          <button type='submit' class='btn_main btn_main_v5 '>Отправить заявление</button>
+                          <button type='submit' class='btn_main btn_main_v5 ' disabled>Отправить заявление</button>
                         </div><!-- /.sporform__button -->
                         <div class="sporform__submitinfo">
                           <div class="infslider_v5__item">
@@ -1236,6 +1236,138 @@
                     </div><!-- /.sporform__fields -->
                   </div><!-- /.sporform__section -->
                 </div><!-- /.sporform__section sporform__section_wrapper -->
+
+                </form>
+              </div><!-- /.sporform__form -->
+              <div class="sporform__form" data-formpage='2'>
+                <form action="">
+                  <div class="sporform__section sporform__section_data" data-formsection='1'
+                    data-sectionstatus='current'>
+                    <div class="sporform__title">Персональные данные</div>
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Фамилия, имя, отчество</div>
+                      <div class="sporform__datavalue">Дзодзиков Владислав Александрович</div>
+                    </div><!-- /.sporform__datarow -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Дата рождения</div>
+                      <div class="sporform__datavalue">03.09.1900</div>
+                    </div><!-- /.sporform__datarow -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Паспорт гражданина РФ</div>
+                      <div class="sporform__datavalue">1234 567890</div>
+                    </div><!-- /.sporform__datarow -->
+
+                  </div><!-- /.sporform__section -->
+                  <div class="sporform__section" data-formsection='2' data-sectionstatus=''>
+                    <div class="sporform__title">Контактные данные</div>
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Телефон</div>
+                      <div class="sporform__datavalue">+7 (925) 123-45-67</div>
+                    </div><!-- /.sporform__datarow -->
+                    <div class="sporform__datarow">
+                      <div class="sporform__datatitle">Электронная почта</div>
+                      <div class="sporform__datavalue">vdzodzikov@gmail.com</div>
+                    </div><!-- /.sporform__datarow -->
+                  </div>
+                  <div class="sporform__section sporform__section_wrapper">
+
+                    <div class="sporform__section" data-formsection='3' data-sectionstatus=''>
+                      <div class="sporform__title">Предмет оспаривания</div>
+                      <div class="sporform__subsction " data-subsection='1'>
+                        <div class="sporform__datarow">
+                          <div class=" sporform__datasubject">Кредит</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">УИД обращения или номер договора</div>
+                          <div class="sporform__datavalue">1234567890</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Сумма</div>
+                          <div class="sporform__datavalue">121 823,00</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Дата выдачи</div>
+                          <div class="sporform__datavalue">11.01.2023</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Источник</div>
+                          <div class="sporform__datavalue">АО «Альфа-Банк»</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">ИНН инсточника</div>
+                          <div class="sporform__datavalue">12345678910</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Причина оспаривания</div>
+                          <div class="sporform__datavalue">Я официально признан банкротом</div>
+                          <div class="sporform__datavalue">Прошу удалить из кредитной истории сведения об обращении и об участии в обязательстве УИД 1234567890.</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Номер дела о банкротстве</div>
+                          <div class="sporform__datavalue">1234567890</div>
+                        </div><!-- /.sporform__datarow -->
+                     
+                      </div>
+                      <div class="sporform__subsction " data-subsection='2'>
+                        <div class="sporform__datarow">
+                          <div class=" sporform__datasubject">Обращение или заявка</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">УИД обращения или номер договора</div>
+                          <div class="sporform__datavalue">1234567890</div>
+                        </div><!-- /.sporform__datarow -->
+                       
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Дата выдачи</div>
+                          <div class="sporform__datavalue">11.01.2023</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Источник</div>
+                          <div class="sporform__datavalue">АО «Альфа-Банк»</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">ИНН инсточника</div>
+                          <div class="sporform__datavalue">12345678910</div>
+                        </div><!-- /.sporform__datarow -->
+                        <div class="sporform__datarow">
+                          <div class="sporform__datatitle">Причина оспаривания</div>
+                          <div class="sporform__datavalue">Я не подавал заявку на оформление кредита</div>
+                        
+                        </div><!-- /.sporform__datarow -->
+                      
+                     
+                      </div>
+
+                      <div class="sporform__section" data-formsection='4'>
+                        <div class="sporform__fields">
+                          <div class="sporform__field">
+                            <div class="v5input sporform__input v5input_noph">
+                              <div class="check-block check-block_light">
+                                <input disabled name="formcheck_send" checked id="formcheck_send" value="formcheck_send" type="checkbox"
+                                  class="inputcheckbox n2">
+                                <label for="formcheck_send">
+                                  <span>Я ознакомлен с условиями и даю согласие АО «НБКИ» на обработку и
+                                    использование моих
+                                    персональных данных</span>
+                                </label>
+                              </div>
+                            </div>
+                          </div><!-- /.sporform__field -->
+
+                          <div class="sporform__field sporform__submit">
+                            <div class="sporform__button">
+                              <button type='submit' class='btn_main btn_main_v5 '>Отправить заявление</button>
+                            </div><!-- /.sporform__button -->
+                            <div class="sporform__button">
+                              <a href='##' class='btn_main btn_main_v5 btn_main_border_v5 ' data-changepage='1'>Отредактировать</a>
+                            </div><!-- /.sporform__button -->
+                           
+                          </div><!-- /.sporform__field -->
+
+
+                        </div><!-- /.sporform__fields -->
+                      </div><!-- /.sporform__section -->
+                    </div><!-- /.sporform__section sporform__section_wrapper -->
 
                 </form>
               </div><!-- /.sporform__form -->

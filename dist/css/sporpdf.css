@@ -1,0 +1,92 @@
+@page {
+  size: A4;
+}
+
+
+.pdfpage {
+ /*    width: 595px; */
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  
+    /* height: 842px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sporform__container {
+    display: block;
+  }
+  .sporform__section {
+    margin-bottom: 0;
+  }
+  .sporform__section_last {
+    margin-top: 30px;
+  }
+  .sporform__datasubject:after {
+   display: none;
+  }
+  .sporform__datasubject  {
+    padding-left: 0;
+  }
+  .sporform__datasubject span {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+  }
+
+  .sporform__datasubject img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+.check-block img {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.check-block span {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  font-weight: 400;
+font-size: 14px;
+line-height: 121%;
+color: #7b7794;
+}
+
+.checkbox {
+  margin: 0;
+  width:20px;
+  height:20px;
+  border: 1px solid #000;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+.sporform__datasubject {
+  line-height: 1;
+}
+.sporform__subsction {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* This is what simulates a checkmark icon */
+.checkbox.checked:after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 7px;
+  
+  /* "Center" the checkmark */
+  position:relative;
+  top:4px;
+  left:7px;
+  
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

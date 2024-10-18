@@ -489,7 +489,24 @@ background-repeat: no-repeat;
   display: inline-block;
 }
 
+[data-formpage] {
+  display: none;
+}
+
+[data-formpage].active {
+  display: block;
+}
+.nbki_v4.wrapperwhite.wrapperwhite_v5 {
+  padding-bottom: 40px;
+}
+.check-block input[type="checkbox"]:disabled + label:before {
+  background-color: #7B7794;
+  border: 1px solid #7B7794;
+}
 @media (max-width: 992px) {
+  .nbki_v4.wrapperwhite.wrapperwhite_v5 {
+    padding-bottom: 20px;
+  }
   .sm-mb-20 {
     margin-bottom: 20px;
   }
@@ -629,5 +646,10 @@ line-height: 150%;
   .sporform__datavalue + .sporform__datavalue {
     margin-top: 4px;
   }
-  
+  .sporsuccess {
+    margin-bottom: 0px;
+  }
+  .sporsuccess .container {
+    padding: 0;
+  }
 }

@@ -2,8 +2,8 @@ const sporform = (function () {
   let subcount = 1
 
   const maskInit = () => {
-    $("[data-mask='phone']").inputmask("+79999999999", {
-      placeholder: "+7          ",
+    $("[data-mask='phone']").inputmask("+7 999 999 9999", {
+      placeholder: "+7             ",
       clearIncomplete: true,
     })
 
@@ -38,6 +38,7 @@ const sporform = (function () {
     $("[data-mask='letters']").inputmask({ regex: "[a-zA-Zа-яА-Я- ]*" })
 
     $("[data-mask='letnum']").inputmask({ regex: "[a-zA-Zа-яА-Я0-9- ]*" })
+    $("[data-mask='letnum_en']").inputmask({ regex: "[a-zA-Z0-9- ]*" })
 
     $("[data-mask='date']").inputmask("99.99.9999", {
       placeholder: "__.__.____",
@@ -88,7 +89,7 @@ const sporform = (function () {
       iscredit__number_1: [
         {
           type: "text",
-          mask: "letnum",
+          mask: "letnum_en",
           name: "sporform_sec3_uid_credit",
           rules: "data-length='1'",
           attributes: 'data-required="required"',
@@ -141,7 +142,7 @@ const sporform = (function () {
       isrequest__number_1: [
         {
           type: "text",
-          mask: "letnum",
+          mask: "letnum_en",
           name: "sporform_sec3_uid_credit",
           rules: "data-length='1'",
           attributes: 'data-required="required"',
@@ -207,7 +208,6 @@ const sporform = (function () {
   }
 
   const createInput = (params) => {
-    console.log(params)
     const isinfo =
       params.info && params.info.length
         ? `<div class="inputinfo">${params.info}</div>`
@@ -296,8 +296,8 @@ const sporform = (function () {
     const $depend = $(`[data-dependselect=${id}]`)
     const $select = $depend.find("select")
     const selval = $select.val()
+    console.log(id)
 
-    console.log(subject[`subject__number_${subcount}`])
     $(block).html("")
     if (selval && subject[`subject__number_${subcount}`][selval]) {
       subject[`subject__number_${subcount}`][selval].forEach((item) => {
@@ -306,6 +306,7 @@ const sporform = (function () {
         $(block).append(newinput)
       })
     }
+
 
     const newselect = createSelect(
       subjSelect[`subject__number_${subcount}`],
@@ -379,20 +380,30 @@ const sporform = (function () {
   }
 
   function signleListeners() {
+    $(document).on("click", '[data-changepage]', function (e) {
+      e.preventDefault()
+      const pageId = $(this).attr('data-changepage')
+      $(`[data-formpage]`).removeClass('active')
+      $(`[data-formpage=${pageId}]`).addClass('active')
+    })
     $(document).on("click", '[data-action="addsubject"]', function (e) {
       e.preventDefault()
       addSubject()
     })
-    $(document).on("click", ".sporform [type='submit']", function (e) {
+    $(document).on("click", "[data-formpage='1'] [type='submit']", function (e) {
       e.preventDefault()
-      validateSection()
+      let valid = validateSection(4)
+      if (valid) {
+        $('[data-formpage="1"]').removeClass('active')
+        $('[data-formpage="2"]').addClass('active')
+      }
     })
-    $(document).on("focus", "[data-formsection]", function (e) {
+    $(document).on("change", "input", function (e) {
       e.preventDefault()
       e.stopPropagation()
       const isSection = $(this).attr("data-formsection")
       const sectId = isSection ? isSection : $(this).closest("data-formsection")
-      validateSection(sectId)
+      validateSection()
     })
   }
   function listenersInit() {
@@ -410,9 +421,16 @@ const sporform = (function () {
     })
     $(document).on("change", "input[name=formcheck]", function (e) {
       if ($(this).is(":checked")) {
-        $('[type="submit"]').removeAttr("disabled")
+        $('[data-formpage="1"] [type="submit"]').removeAttr("disabled")
       } else {
-        $('[type="submit"]').attr("disabled", "disabled")
+        $('[data-formpage="1"] [type="submit"]').attr("disabled", "disabled")
+      }
+    })
+    $(document).on("change", "input[name=formcheck_send]", function (e) {
+      if ($(this).is(":checked")) {
+        $('[data-formpage="2"] [type="submit"]').removeAttr("disabled")
+      } else {
+        $('[data-formpage="2"] [type="submit"]').attr("disabled", "disabled")
       }
     })
 
@@ -431,13 +449,19 @@ const sporform = (function () {
     $(`[data-formstep=${id}]`).attr("data-sectionstatus", "current")
 
     // перешли на новую, проверяем все предыдущие
+    let isValid = true
     for (let i = 1; i < id; i++) {
       let valid = validate(`[data-formsection=${i}]`)
       if (valid) {
         $(`[data-formsection=${i}]`).attr("data-sectionstatus", "success")
         $(`[data-formstep=${i}]`).attr("data-sectionstatus", "success")
+      } else {
+        isValid = false
       }
     }
+
+    return isValid
+    
   }
 
   function addFields(subj, count) {
