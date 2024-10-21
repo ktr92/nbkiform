@@ -1035,8 +1035,9 @@
                   <div class="sporform__section sporform__section_wrapper">
 
                   <div class="sporform__section" data-formsection='3' data-sectionstatus=''>
-                    <div class="sporform__title">Предмет оспаривания</div>
                     <div class="sporform__subsction" data-subsection='1'  data-sectionid='subject__number_1'>
+                      <div class="sporform__title"  data-sectiontitle='1'>Предмет оспаривания</div>
+
                       <div class="sporform__fields">
                         <div class="sporform__field">
                           <div class="v5input sporform__input" data-dependselect="issubject__number_1" data-hasdepend='1'>
@@ -1181,11 +1182,11 @@
 
                           </div>
                         </div>
-                        <div class="sporform__field sporform__field_right">
+                       <!--  <div class="sporform__field sporform__field_right">
                           <div class="v5input sporform__input">
                               <a href="#myModal_confirmation" data-toggle="modal" data-toremove='subject__number_1'>Удалить это оспаривание</a>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
 
@@ -1195,7 +1196,7 @@
                     <div id='newsubjects'></div>
 
                     
-                    <div class="sporform__field" >
+                    <div class="sporform__field sporform__field_createField" >
                       <a href="" class="addsubject" data-action="addsubject" >Добавить новое оспаривание</a><!-- /.link -->
                     </div>
 
@@ -2315,6 +2316,20 @@
           <div class="modal__buttons">
             <span class="btn_main btn_main_v5" data-dismiss="modal" >Оставить</span>
             <span class="btn_main btn_main_v5" data-remove=''>Удалить</span>
+          </div><!-- /.modal__buttons -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="myModal_subjectlimit" class="modal modal_confirmation fade">
+    <div class="modal-dialog modal-dialog_login">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+          <div class="modal__onetitle">В заявление можно добавить до&nbsp;пяти предметов оспаривания</div>
+          <div class="modal__text">Создайте новое заявление, чтобы оспорить другие сведения</div>
+          <div class="modal__buttons">
+            <span class="btn_main btn_main_border_v5" data-dismiss="modal" >Вернуться к заявлению</span>
           </div><!-- /.modal__buttons -->
         </div>
       </div>

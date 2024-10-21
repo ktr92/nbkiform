@@ -84,6 +84,20 @@ const sporform = (function () {
     }
   }
 
+  const subjectTitles = {
+    total: [
+      'Первый',
+      'Второй',
+      'Третий',
+      'Четвертый',
+      'Пятый'
+      
+    ],
+    current: [
+      
+    ]
+  }
+
   const subject = {
     subject__number_1: {
       iscredit__number_1: [
@@ -365,7 +379,6 @@ const sporform = (function () {
 
   function removeSubject(id) {
     const $section = $(`[data-sectionid=${id}]`)
-    console.log(id)
 
       if ($section.length && Object.keys(subject).length > 1) {
         $section.remove()
@@ -373,9 +386,22 @@ const sporform = (function () {
         delete subjSelect[id]
         
       }
-      if (Object.keys(subject).length < 2) {
+      const objlen = Object.keys(subject).length
+      if (objlen < 2) {
         $('[data-toremove]').removeClass('active') 
        }
+
+       // переименовать предметы оспаривания
+       const titles = $('[data-sectiontitle]')
+       titles.each(function(index) {
+        
+        if (index > 0) {
+          $(this).html(`${subjectTitles.total[index]} предмет оспаривания`)
+        } else {
+          $(this).html(`Предмет оспаривания`)
+        }
+        
+       })
   }
 
   function signleListeners() {
@@ -411,7 +437,8 @@ const sporform = (function () {
   function toRemoveInit() {
     $(document).on("click", "[data-remove]", function (e) {
       e.preventDefault()
-      const id = $(this).data("remove")
+   /*    const id = $(this).data("remove") */
+      const id = $(this).attr("data-remove")
       removeSubject(id)
       $('.modal').modal('hide')
     })
@@ -517,9 +544,23 @@ const sporform = (function () {
   }
 
   function addSubject() {
+    const subjectsCount = Object.keys(subject).length
+    if (subjectsCount > 4) {
+      $('#myModal_subjectlimit').modal('show')
+      return
+    }
     subcount++
     $("#newsubjects").append(`
+
         <div class="sporform__subsction" data-subsection='${subcount}' data-sectionid='subject__number_${subcount}'>
+        <div class="sporform__header"> 
+                <div class="sporform__title"  data-sectiontitle='${subcount}'>${subjectTitles.total[subjectsCount]} предмет оспаривания</div>
+                  <div class="sporform__field sporform__field_right sporform__field_remove">
+                          <div class="v5input sporform__input">
+                              <a href="#myModal_confirmation" data-toggle="modal" data-toremove='subject__number_${subcount}'><span> Удалить это оспаривание</span></a>
+                          </div>
+                        </div>
+        </div>
         <div class="sporform__fields">
           <div class="sporform__field">
             <div class="v5input sporform__input" data-dependselect="issubject__number_${subcount}" data-hasdepend='1'>
@@ -566,11 +607,7 @@ const sporform = (function () {
             </div>
           </div>
 
-          <div class="sporform__field sporform__field_right">
-                          <div class="v5input sporform__input">
-                              <a href="#myModal_confirmation" data-toggle="modal" data-toremove='subject__number_${subcount}'>Удалить это оспаривание</a>
-                          </div>
-                        </div>
+        
        </div>
       </div>
     `)
