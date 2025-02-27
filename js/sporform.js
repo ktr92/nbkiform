@@ -20,7 +20,7 @@ const sporform = (function () {
       },
     }).mask($('[data-mask="summ"]'))
 
-    $("[data-mask='email']").inputmask({
+   /*  $("[data-mask='email']").inputmask({
       mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
       greedy: false,
       onBeforePaste: function (pastedValue, opts) {
@@ -34,7 +34,7 @@ const sporform = (function () {
         },
       },
     })
-
+ */
     $("[data-mask='letters']").inputmask({ regex: "[a-zA-Zа-яА-Я- ]*" })
 
     $("[data-mask='letnum']").inputmask({ regex: "[a-zA-Zа-яА-Я0-9- ]*" })
