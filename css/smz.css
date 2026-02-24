@@ -268,15 +268,24 @@ line-height: 125%;
 }
 .blockv7__items {
 }
+
+.blockv7__title {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 22px;
+}
 .blockv7__item {
-  display: flex;
-  gap: 16px;
+
   box-shadow: 0 4px 4px 0 rgba(115, 100, 178, 0.1);
 background: #fff;
 padding: 32px;
 border-radius: 10px;
 
 margin-bottom: 26px;
+}
+.blockv7__block {
+  display: flex;
+  gap: 16px;
 }
 .blockv7__icon {
 }
@@ -291,7 +300,7 @@ line-height: 111%;
   max-width: 352px;
 }
 [data-popup] {
-  text-decoration: underline;
+  border-bottom: 2px dotted #000;
   cursor: pointer;
 }
 
@@ -628,8 +637,13 @@ text-decoration: underline;
 font-size: 16px;
 line-height: 125%
   }
-  .infblockv5_static .infblockv5__text {
+  .rsmainslider_v7   .infblockv5_static .infblockv5__text {
     font-size: 14px;
+    line-height: 24px;
+  }
+  .rsmainslider_v7   .rsmainslider__slider .infblockv5 {
+    padding: 10px;
+    gap: 10px;
   }
   .tabslider__wrapper .calccontent__item {
     padding: 32px 16px;
@@ -649,5 +663,18 @@ line-height: 125%
   }
   .tabslider__wrapper {
     padding-bottom: 0;
+  }
+  a.calccontent__item.calccontent__item__link {
+    padding-top: 72px;
+  }
+  .calccontent__item__link:after {
+    top: 32px;
+    right: 16px;
+    height: 24px;
+    width: 24px;
+    content: url('data:image/svg+xml,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_31294_1174" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25"><rect y="0.599976" width="24" height="24" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_31294_1174)"><path d="M11.4504 19.6751C11.2664 19.4919 11.1744 19.3043 11.1744 19.1123C11.1744 18.9211 11.258 18.7335 11.4252 18.5495L16.5996 13.4003H5.17444C4.97444 13.4003 4.79124 13.3211 4.62484 13.1627C4.45844 13.0043 4.37524 12.8167 4.37524 12.5999C4.37524 12.3831 4.45844 12.1955 4.62484 12.0371C4.79124 11.8787 4.97444 11.7995 5.17444 11.7995H16.5996L11.4252 6.67435C11.258 6.49115 11.1744 6.29955 11.1744 6.09955C11.1744 5.89955 11.2664 5.70795 11.4504 5.52475C11.6336 5.35835 11.8168 5.27515 12 5.27515C12.1832 5.27515 12.3664 5.35835 12.5496 5.52475L18.9252 11.9255C19.042 12.0247 19.1252 12.1327 19.1748 12.2495C19.2252 12.3663 19.2504 12.4831 19.2504 12.5999C19.2504 12.7167 19.2252 12.8335 19.1748 12.9503C19.1252 13.0671 19.042 13.1751 18.9252 13.2743L12.5496 19.6751C12.3664 19.8415 12.1832 19.9247 12 19.9247C11.8168 19.9247 11.6336 19.8415 11.4504 19.6751Z" fill="%234563FF"/></g></svg>');
+  }
+  .blockv7__item:last-child {
+    margin-bottom: 0;
   }
 }

@@ -1,0 +1,1201 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(55,55,55);
+  font-size: 14px;
+}
+.calcblock {
+width: 391px;
+max-width: 100%;
+background: #FFFFFF;
+border-radius: 12px;
+padding: 26px 26px 20px 26px;
+box-shadow: 0px 0px 40px rgba(55, 55, 55, 0.15);
+margin: 40px auto;
+}
+
+.mainblock__title {
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 150%;
+color: #373737;
+}
+
+.header__content {
+border-bottom: none;
+position: relative;
+position: relative;
+z-index: 2;
+background: #fff;
+box-shadow: 0px 0px 40px rgba(55, 55, 55, 0.15);
+}
+
+.header__top {
+background: #fff;
+position: relative;
+z-index: 3;
+}
+
+a.link {
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+color: #373737;
+}
+
+.calcform__items {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+flex-direction: column;
+width: 100%;
+}
+
+.calcform__item {
+  width: 100%;
+
+}
+
+
+
+.calcform__items_line input {
+padding: 0 20px;
+}
+
+.calcform__items_cols {
+  display: flex;
+  margin: 0 -5px;
+  flex-direction: row;
+}
+.calcform__items_cols .calcform__item {
+padding: 0 5px;
+width: 50%;
+}
+.calcform__items_location .calcform__item {
+  margin-bottom: 8px;
+}
+.calcform__copyright {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  display: block;
+  height: 46px;
+  line-height: 44px;
+  background: #F5F5F5;
+  border: none;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737;
+
+}
+
+
+input::-webkit-input-placeholder {
+/* Chrome/Opera/Safari */
+color: rgba(55, 55, 55, 0.4);
+font-size: 14px;
+}
+
+input::-moz-placeholder {
+/* Firefox 19+ */
+color: rgba(55, 55, 55, 0.4);
+font-size: 14px;
+}
+
+input:-ms-input-placeholder {
+/* IE 10+ */
+color: rgba(55, 55, 55, 0.4);
+font-size: 14px;}
+
+input:-moz-placeholder {
+/* Firefox 18- */
+color: rgba(55, 55, 55, 0.4);
+font-size: 14px;}
+
+.calcform .btn_main_icon {
+box-shadow: none;
+padding: 16px 31px 15px 32px;
+}
+
+.calcform__item_pin {
+max-width: 175px;
+}
+
+.calcform__item_search {
+width: 86px;
+}
+
+.calcform__item_ttn {
+width: inherit;
+}
+
+.calcblock__title {
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 100%;
+margin-bottom: 19px;
+color: #373737;
+}
+
+.calcform__title {
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 100%;
+/* identical to box height, or 16px */
+margin-bottom: 17px;
+color: #373737;
+}
+
+.calcform__content .calcform__items {
+
+border-bottom: 1px solid #F3F3F3;
+}
+
+.calcform__footer {
+  
+}
+.calcform__content .calcform__items:last-child {
+margin-bottom: 24px;
+padding-bottom: 0;
+border: none;
+}
+
+
+.btn_main {
+padding: 14px 22px;
+}
+
+.calcform__button button,
+.calcform__button input {
+width: 100%;
+}
+
+.calcform__items.calcform__items_line {
+margin-right: -9px;
+width: 100%;
+margin-bottom: 17px;
+}
+
+.inputLocation {
+position: relative;
+}
+
+.cityList {
+/* Remove default list styling */
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: none;
+position: absolute;
+top: 100%;
+width: 100%;
+padding: 12px 12px 18px 16px;
+z-index: 9;
+background: #F5F5F5;
+border-radius: 0 0 5px 5px;
+}
+
+.cityListContainer {
+max-height: 170px;
+overflow-y: auto;
+}
+
+.cityList li a {
+background-color: #F5F5F5;
+/* Grey background color */
+padding-bottom: 18px;
+/* Add some padding */
+text-decoration: none;
+/* Remove default text underline */
+display: block;
+/* Make it into a block element to fill the whole list */
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+/* identical to box height, or 12px */
+color: #373737;
+box-sizing: border-box;
+}
+
+.cityList li:last-child a {
+padding-bottom: 0;
+}
+
+.cityList1 li a:hover:not(.header) {
+background-color: #eee;
+/* Add a hover effect to all links, except for headers */
+}
+.calcform__item input {
+  padding-top: 14px;
+  padding-bottom: 0;
+  height: 50px;
+  font-weight: 600;
+font-size: 14px;
+padding-left: 38px;
+}
+.calcform__item label {
+  display: block;
+}
+.calcform__item .placeholder {
+  opacity: 1;
+  transform: translateY(-50%);
+  z-index: 3;
+  position: absolute;
+  left: 38px;
+  top: 50%;
+  display: inline-block;
+  
+  white-space: nowrap;
+}
+.calcform__item input:focus  {
+  outline: none !important;
+  border-top: 1px solid rgba(55, 55, 55, 0.1);
+  border-left: 1px solid rgba(55, 55, 55, 0.1);
+  border-right: 1px solid rgba(55, 55, 55, 0.1);
+  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid #8235ff;
+  background: #fff;
+}
+.calcform__item input:focus + .placeholder {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 100%;
+  color: #373737;
+  top: calc(50% - 10px);
+}
+.calcform__item input.complete:focus {
+  background: #fff;
+}
+/* .calcform__item input.complete + .placeholder {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 100%;
+  color: #373737;
+  top: calc(50% - 8px);
+} */
+
+.errortext {
+  display: none;
+  font-size: 10px;color: #F23F34;
+  position: absolute;
+  bottom: -15px;
+  font-weight: 500;
+}
+.error  {
+  margin-bottom: 15px;
+}
+.error .errortext {
+  display: block;
+}
+.error input {
+  border-top: 1px solid #f23f34;
+  border-left: 1px solid #f23f34;
+  border-right: 1px solid #f23f34;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid #f23f34;
+  background: #fff;
+}
+.error .placeholder {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 100%;
+  color: #373737;
+  top: calc(50% - 10px);
+}
+
+.inputLocation {
+position: relative;
+}
+
+.calcform__items_two_xs .calcform__item {
+  margin-bottom: 0;
+}
+
+
+.inputLocation svg {
+position: absolute;
+top: calc(50%);
+transform: translateY(-50%);
+left: 15px;
+}
+
+
+.inputLocation.onprocess svg path {
+fill: #F23F34;
+}
+
+.inputLocation.onprocess input {
+background: #fff;
+}
+
+.inputLocation.complete input {
+background: #F5F5F5;
+font-size: 16px;
+font-weight: 600;
+}
+
+.inputLocation.complete svg path {
+fill: #F23F34;
+}
+
+
+
+
+.inputLocation input::-webkit-input-placeholder {
+/* Chrome/Opera/Safari */
+font-size: 14px;
+color: #373737;
+}
+
+.inputLocation input::-moz-placeholder {
+/* Firefox 19+ */
+font-size: 14px;
+color: #373737;
+}
+
+.inputLocation input:-ms-input-placeholder {
+/* IE 10+ */
+font-size: 14px;
+color: #373737;
+}
+
+.inputLocation input:-moz-placeholder {
+/* Firefox 18- */
+font-size: 14px;
+color: #373737;
+}
+
+/* Works on Firefox */
+.inputLocation {
+scrollbar-width: 3px;
+scrollbar-color: #F23F34 #D1D1D1;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.inputLocation ::-webkit-scrollbar {
+width: 3px;
+}
+
+.inputLocation ::-webkit-scrollbar-track {
+cursor: pointer;
+width: 3px;
+background: #D1D1D1;
+border-radius: 55px;
+}
+
+.inputLocation ::-webkit-scrollbar-thumb {
+background: #F23F34;
+border-radius: 55px;
+cursor: pointer;
+}
+
+
+.calcform .btn_main_icon span {
+display: none;
+}
+
+.switcher {
+position: absolute;
+transform: rotate(90deg);
+right: 0;
+margin: auto;
+width: 36px;
+height: 36px;
+z-index: 2;
+top: 35px
+}
+
+.calcform__items {
+position: relative;
+}
+
+.switcher a {
+width: 36px;
+height: 36px;
+border-radius: 50%;
+overflow: hidden;
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+background: #FFFFFF;
+box-shadow: 5px 5px 15px rgba(50, 50, 50, 0.15);
+}
+
+.btn_main {
+border: none;
+white-space: nowrap;
+padding: 17px 22px;
+background: #F23F34;
+border-radius: 5px;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+text-align: center;
+color: #FFFFFF;
+border-radius: 8px;
+/* box-shadow: 0 10px 20px -12px #F23F34; */
+transition: all 0.3s ease;
+display: inline-block;
+outline: none !important;
+}
+
+.btn_main:hover {
+background: #C4160B;
+color: #FFFFFF;
+}
+
+.btn_main:focus {
+background: #C4160B;
+color: #FFFFFF;
+}
+
+
+
+.switches label,
+.switches li {
+  display: flex;
+  align-items: center;
+}
+
+.switches li {
+  position: relative;
+  counter-increment: switchCounter;
+}
+
+.switches label {
+  justify-content: space-between;
+
+  margin-bottom: 0;
+}
+
+.switches label span:last-child {
+  position: relative;
+  width: 38px;
+  height: 23px;
+  background: #e9e9e9;
+  border-radius: 555px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.switches label span:last-child::after,
+.switches label span:last-child::before {
+  content: "";
+  position: absolute;
+}
+
+.switches label span:last-child::before {
+  left: 3px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.switches label span:last-child::after {
+  top: 50%;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  background-size: 12px 12px;
+}
+.calcform__item {
+  position: relative;
+}
+.switches [type="checkbox"]:checked + label span:last-child {
+  background: #f23f34;
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::before {
+  transform: translateX(16px);
+}
+
+.switches [type="checkbox"]:checked + label span:last-child::after {
+  width: 14px;
+  height: 14px;
+  left: 8px;
+  background-size: 14px 14px;
+}
+
+.switches [type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.calcprice .radiotype label,
+.switches {
+  width: 100%;
+}
+
+.switches ol {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.switches__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #373737;
+}
+
+.calctotal__title b,
+.switches__name.active {
+  color: #373737;
+}
+
+.switches__name .help-tooltip__text {
+  text-align: left;
+}
+.calcheader__help:hover .help-tooltip {
+  visibility: visible;
+}
+
+.help-call {
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 10px;
+  display: block;
+}
+span.calcheader__help {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  position: relative;
+}
+
+.calcinfo {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.calcinfo__icon {
+  margin-right: 7px;
+}
+
+.calcform__items_default input {
+  padding-left: 22px;
+}
+.placeholder  {
+  font-size: 14px;
+  
+}
+
+.form-control__wrapper {
+  position: relative;
+}
+
+.calcform__items_default .placeholder {
+  left: 22px;
+}
+
+.calcform__items_default .placeholder {
+  left: 22px;
+}
+
+.calcform__items_default input:focus + .placeholder {
+left: 22px;
+}
+
+.calcinfo__name,
+.calcpage .inputLocation input,
+.page_calc h1 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  color: #373737;
+}
+
+.calcinfo__name {
+  font-size: 16px;
+  margin-right: 7px;
+}
+
+.calcinfo__value {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+.help-tooltip__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: block;
+  color: #373737;
+}
+
+.help-tooltip__content {
+  padding: 15px 24px;
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.help-tooltip__content:after {
+  content: url('data:image/svg+xml,<svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 4.89243e-10H39C22.2857 6.84304e-10 11.0104 10.3558 0 22C5.72937 12.2073 7.8 -1.94715e-10 0 4.89243e-10Z" fill="white"/></svg>');
+  position: absolute;
+  top: 100%;
+  left: 25px;
+}
+
+.help-tooltip__info {
+  margin-top: 13px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  color: #373737;
+}
+
+.help-tooltip {
+  white-space: initial;
+  visibility: hidden;
+  position: absolute;
+  z-index: 9999;
+  transition: 0.4s all ease !important;
+  bottom: calc(100% + 22px);
+  left: calc(50% - 22px);
+  width: 355px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 10px 10px 40px rgba(55, 55, 55, 0.15);
+}
+.help-tooltip a {
+  transition: unset;
+}
+
+.switches__name {
+  display: flex;
+  align-items: center;
+}
+
+.switches__name .checkboxtext {
+font-size: 14px;
+font-weight: normal;
+  display: block;
+}
+
+ol.switches {
+  padding-left: 0;
+  margin: 17px 0;
+  width: 100%;
+}
+
+.switches li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.formcheckbox__items {
+  display: flex;
+  align-items: center;
+}
+
+
+span.formcheckbox__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #373737;
+}
+
+.calcform.calcform-js,
+.formcheckbox input[type="checkbox"] {
+  display: none;
+}
+
+span.formcheckbox__text:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d7d7d7;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.formcheckbox label {
+  cursor: pointer;
+/*   margin-bottom: 8px; */
+  transition: all 0.5s;
+  position: relative;
+  padding-left: 26px;
+  display: block;
+  width: 100%;
+  line-height: 1;
+}
+
+.formcheckbox label:hover .formcheckbox__text:before {
+  background: #f23f34;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #f23f34;
+}
+
+.formcheckbox input[type="checkbox"]:checked + .formcheckbox__text:before {
+  background: #f23f34;
+ /*  background-image: url(/local/templates/azlog/public/css/../images/radio.svg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #f23f34;
+}
+.formcheckbox__label_type2 span.formcheckbox__text:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  opacity: 0.4;
+  background: 0 0;
+  background-image: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.36377C9.04452 2.36377 4.93035 3.28303 4.93035 3.28303L4.927 3.28649C4.53769 3.36686 4.18736 3.58372 3.93551 3.90024C3.68367 4.21676 3.54583 4.61342 3.54541 5.02286V10.341C3.54541 19.5575 12.1589 23.4097 12.1589 23.4097C12.4158 23.5584 12.7054 23.6365 13 23.6365C13.2934 23.6359 13.5818 23.5578 13.8376 23.4097H13.841C13.841 23.4097 22.4545 19.5575 22.4545 10.341V5.02286C22.4547 4.61234 22.3167 4.21447 22.0642 3.89717C21.8116 3.57987 21.46 3.3628 21.0696 3.28303C21.0696 3.28303 16.9554 2.36377 13 2.36377Z" fill="%23D9D9D9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M11.1968 11.8181L8.27295 8.89421L10.0763 7.09082L13.0002 10.0147L15.9241 7.09082L17.7275 8.89421L14.8036 11.8181L17.7275 14.742L15.9241 16.5454L13.0002 13.6215L10.0763 16.5454L8.27295 14.742L11.1968 11.8181Z" fill="white"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.formcheckbox label.formcheckbox__label_type2:hover .formcheckbox__text:before {
+  background: 0 0;
+  border: 0;
+  background-image: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.36377C9.04452 2.36377 4.93035 3.28303 4.93035 3.28303L4.927 3.28649C4.53769 3.36686 4.18736 3.58372 3.93551 3.90024C3.68367 4.21676 3.54583 4.61342 3.54541 5.02286V10.341C3.54541 19.5575 12.1589 23.4097 12.1589 23.4097C12.4158 23.5584 12.7054 23.6365 13 23.6365C13.2934 23.6359 13.5818 23.5578 13.8376 23.4097H13.841C13.8419 23.4097 22.4545 19.5575 22.4545 10.341V5.02286C22.4547 4.61234 22.3167 4.21447 22.0642 3.89717C21.8116 3.57987 21.46 3.3628 21.0696 3.28303C21.0696 3.28303 16.9554 2.36377 13 2.36377ZM18.157 7.68195C18.3768 7.68195 18.5966 7.76834 18.7647 7.94163C19.1007 8.2882 19.1007 8.84843 18.7647 9.195L12.2664 15.8964C12.1048 16.063 11.8864 16.1561 11.6587 16.1561C11.4309 16.1561 11.2117 16.063 11.051 15.8964L8.08299 12.8357C7.74692 12.4891 7.74692 11.9289 8.08299 11.5823C8.41905 11.2357 8.96231 11.2357 9.29838 11.5823L11.6587 14.0163L17.5493 7.94163C17.7173 7.76834 17.9372 7.68195 18.157 7.68195Z" fill="%23F23F34"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+}
+
+.formcheckbox__label_type2
+  input[type="checkbox"]:checked
+  + .formcheckbox__text:before {
+  content: "";
+  background: 0 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 26px;
+  height: 26px;
+  background-image: url('data:image/svg+xml,<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.36377C9.04452 2.36377 4.93035 3.28303 4.93035 3.28303L4.927 3.28649C4.53769 3.36686 4.18736 3.58372 3.93551 3.90024C3.68367 4.21676 3.54583 4.61342 3.54541 5.02286V10.341C3.54541 19.5575 12.1589 23.4097 12.1589 23.4097C12.4158 23.5584 12.7054 23.6365 13 23.6365C13.2934 23.6359 13.5818 23.5578 13.8376 23.4097H13.841C13.8419 23.4097 22.4545 19.5575 22.4545 10.341V5.02286C22.4547 4.61234 22.3167 4.21447 22.0642 3.89717C21.8116 3.57987 21.46 3.3628 21.0696 3.28303C21.0696 3.28303 16.9554 2.36377 13 2.36377ZM18.157 7.68195C18.3768 7.68195 18.5966 7.76834 18.7647 7.94163C19.1007 8.2882 19.1007 8.84843 18.7647 9.195L12.2664 15.8964C12.1048 16.063 11.8864 16.1561 11.6587 16.1561C11.4309 16.1561 11.2117 16.063 11.051 15.8964L8.08299 12.8357C7.74692 12.4891 7.74692 11.9289 8.08299 11.5823C8.41905 11.2357 8.96231 11.2357 9.29838 11.5823L11.6587 14.0163L17.5493 7.94163C17.7173 7.76834 17.9372 7.68195 18.157 7.68195Z" fill="%23F23F34"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  border: 0;
+}
+.formcheckbox input[type="checkbox"] {
+  display: none;
+}
+
+.formcheckbox__item {
+  margin-right: 25px;
+}
+
+.formcheckbox__title {
+  font-weight: bold;
+}
+
+.formcheckbox__text {
+  padding-left: 10px;
+  line-height: 26px;
+}
+
+.calcform__extra {
+  margin-bottom: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.calcblock__results {
+}
+.calcresults {
+}
+.calcresults__items {
+/*   display: flex; */
+
+}
+.calcresults__item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.resultblock {
+}
+.resultblock__wrapper {
+  border-radius: 12px;
+  padding: 12px;
+  background: #F5F5F5;
+}
+.resultblock__header {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+.resultblock__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resultblock__img {
+}
+.resultblock__title {
+  margin-left: 9px;
+}
+.resultblock__name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+.resultblock__info {
+  color: rgba(55,55,55,0.5);
+  font-size: 12px;
+}
+.resultblock__main {
+  font-size: 14px;
+}
+.resultblock__params {
+  margin-bottom: 12px;
+}
+.resultblock__param {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.resultblock__dt {
+  color: rgba(55,55,55, 0.55);
+  font-size: 12px;
+}
+.resultblock__dd {
+  font-weight: bold;
+  font-size: 12px;
+}
+.resultblock__subtitle {
+  padding-left: 18px;
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.resultblock__subtitle:before {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 2px;
+  background: #F23F34;
+  left: 0;
+  top: 7px;
+}
+.resultblock__footer {
+}
+.resultblock__footertitle {
+}
+.resultblock__total {
+}
+.resultblock__delimeter {
+	background:  url('data:image/svg+xml,<svg width="260" height="4" viewBox="0 0 236 4" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="white"/><circle cx="10" cy="2" r="2" fill="white"/><circle cx="18" cy="2" r="2" fill="white"/><circle cx="26" cy="2" r="2" fill="white"/><circle cx="34" cy="2" r="2" fill="white"/><circle cx="42" cy="2" r="2" fill="white"/><circle cx="50" cy="2" r="2" fill="white"/><circle cx="58" cy="2" r="2" fill="white"/><circle cx="66" cy="2" r="2" fill="white"/><circle cx="74" cy="2" r="2" fill="white"/><circle cx="82" cy="2" r="2" fill="white"/><circle cx="90" cy="2" r="2" fill="white"/><circle cx="98" cy="2" r="2" fill="white"/><circle cx="106" cy="2" r="2" fill="white"/><circle cx="114" cy="2" r="2" fill="white"/><circle cx="122" cy="2" r="2" fill="white"/><circle cx="130" cy="2" r="2" fill="white"/><circle cx="138" cy="2" r="2" fill="white"/><circle cx="146" cy="2" r="2" fill="white"/><circle cx="154" cy="2" r="2" fill="white"/><circle cx="162" cy="2" r="2" fill="white"/><circle cx="170" cy="2" r="2" fill="white"/><circle cx="178" cy="2" r="2" fill="white"/><circle cx="186" cy="2" r="2" fill="white"/><circle cx="194" cy="2" r="2" fill="white"/><circle cx="202" cy="2" r="2" fill="white"/><circle cx="210" cy="2" r="2" fill="white"/><circle cx="218" cy="2" r="2" fill="white"/><circle cx="226" cy="2" r="2" fill="white"/><circle cx="234" cy="2" r="2" fill="white"/></svg>');
+	height: 4px;
+  margin: 6px 0;
+	position: relative;
+	width: calc(100% + 44px);
+  transform: translateX(-22px) translateY(-2px);
+background-position: top -2px;
+}
+
+.resultblock__delimeter:before {
+	content: url('data:image/svg+xml,<svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C4.41828 16 8 12.4183 8 8C8 3.58172 4.41828 0 0 0V16Z" fill="white"/></svg>');
+	position: absolute;
+	left: 0;
+	transform: translateY(-50%);
+	top: 50%;
+}
+.resultblock__delimeter:after {
+	content: url('data:image/svg+xml,<svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0V16Z" fill="white"/></svg>');
+	position: absolute;
+	right: 0;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.resultblock__footertitle {
+  font-size: 14px;
+}
+
+.resultblock__total {
+  font-size: 18px;
+  color: #F23F34;
+}
+
+.resultblock__footer {
+  padding-top: 12px;
+}
+
+.resultblock__main {
+  margin-bottom: 20px;
+}
+
+.resultblock__param:last-child {
+  margin-bottom: 0;
+}
+
+.calcblock__results {
+  margin-top: 32px;
+}
+.btn_main {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+.btn_main.active {
+  background: #F5F5F5;
+  color: #F23F34;
+  font-weight: bold;
+}
+
+.resultblock__footer .resultblock__params {
+  margin-bottom: 0;
+}
+
+.resultblock {
+  height: 100%;
+}
+.resultblock__wrapper {
+  height: 100%;
+}
+.resultblock__main {
+  height: calc(100% - 123px);
+}
+
+
+
+[data-calc="result"] {
+  display: none;
+}
+
+[data-calc="result"].active {
+  display: block;
+}
+
+.calcresults__title {
+  display: none !important
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+
+.calcresults__items {
+  flex-wrap: wrap;
+}
+.calcresults__items .calcresults__item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* 
+.resultblock__header {
+  padding-right: 20px;
+  background-image: url('data:image/svg+xml,<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M7 5.32211L12.2024 -7.8575e-08L14 1.83894L7 9L-8.03828e-08 1.83894L1.79759 -5.33384e-07L7 5.32211Z" fill="%23373737"/></svg>');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.resultblock__header.active {
+  padding-right: 20px;
+  background-image: url('data:image/svg+xml,<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.67789L12.2024 9L14 7.16106L7 3.0598e-07L-8.03828e-08 7.16106L1.79759 9L7 3.67789Z" fill="%23373737"/></svg>');
+  background-position: right center;
+  background-repeat: no-repeat;
+} */
+.resultblock__main 
+{margin-bottom: 0;}
+
+[data-toggle] {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease-in-out;
+}
+[data-toggle].active {
+  height: unset;
+}
+.calcresults__title.active {
+display: block !important;
+}
+
+.calcresults__title {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+padding-top: 30px;
+}
+
+.resultblock__header {
+  cursor: pointer;
+}
+.calcform__item input:focus + .placeholder,
+.calcform__item input:not([value=""]) + .placeholder {
+  top: 10px;
+  font-size: 10px;
+  transform: translateY(0);
+  opacity: 0.5;
+} 
+.complete input:focus + .placeholder,
+.complete:not([value=""]) + .placeholder {
+  top: 10px;
+  font-size: 10px;
+  transform: translateY(0);
+  opacity: 0.5;
+} 
+.form-control__wrapper input:focus + .placeholder,
+.form-control__wrapper:not([value=""]) + .placeholder {
+  top: 10px;
+  font-size: 10px;
+  transform: translateY(0);
+  opacity: 0.5;
+} 
+.complete  .placeholder {
+  top: 10px;
+  font-size: 10px;
+  transform: translateY(0);
+  opacity: 0.5;
+  line-height: 12px;
+  display: block;
+  height: 12px;
+} 
+.radiotype input[type="radio"] {
+  display: none;
+}
+
+.radiotype span.radiotype__text:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #d7d7d7;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+.radiotype label:hover .radiotype__text:before {
+  border: 2px solid #f23f34;
+}
+
+.radiotype input[type="radio"]:checked + .radiotype__text:before {
+  border: 2px solid #f23f34;
+  background-image: url(img/Rectangle219.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.radiotype span.radiotype__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #373737;
+  white-space: nowrap;
+}
+
+.radiotype label {
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all 0.5s;
+  position: relative;
+  padding-left: 27px;
+  display: block;
+  line-height: 1;
+}
+
+.radiotype_row {
+  display: flex;
+  margin: 0 -11px;
+}
+
+.radiotype_row .radiotype__item {
+  padding: 0 11px;
+}
+
+.calcform__radiobuttons {
+  margin-bottom: 10px;
+}
+
+.resultblock__headermain {
+  display: flex;
+  align-items: center;
+}
+.radiotype label {
+  width: 100%;
+  padding-left: 0;
+}
+.radiotype span.radiotype__text:before {
+  top: calc(50% - 9px);
+  right: 0px;
+  left: unset;
+}
+
+.radiotype input[type="radio"]:checked + .radiotype__text:after {
+  display: none;
+}
