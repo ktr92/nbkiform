@@ -199,6 +199,9 @@ line-height: 125%;
   height: 516px;
     position: relative;
 }
+.borderblock__title {
+  line-height: 127%;
+}
 .stickedslides__aside img {
   display: none;
   position: absolute;
@@ -214,3 +217,33 @@ line-height: 125%;
 .stickysection {
   overflow: visible;
 }
+
+.borderblock__subtitle {
+  text-align: right;
+  font-weight: 400;
+font-size: 20px;
+margin-bottom: 24px;
+}
+
+.svgText__title {
+  font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+text-align: right;
+fill: #000;
+
+}
+
+.svgText__text{
+  font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+text-align: right;
+fill: #7b7794;
+
+}
+
+.stickysection {
+  position: static;
+} 
+
