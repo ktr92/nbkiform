@@ -71,10 +71,12 @@
   <script src="//nbki.ru/local/templates/nbkiv4/public/js/main.js?172233052538044"></script>
   <script src="//nbki.ru/local/templates/nbkiv4/public/js/old.main.js?172259437841409"></script>
   <script src="//nbki.ru/local/templates/nbkiv4/public/js/ingevents.4.0.9b.js?166090484919144"></script>
- 
-<!--   <link rel="stylesheet" href="//unpkg.com/lenis@1.3.17/dist/lenis.css">
+
+  <!--   <link rel="stylesheet" href="//unpkg.com/lenis@1.3.17/dist/lenis.css">
   <script src="//unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script> 
  -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
 
   <meta property="og:title" content="Оспорить кредитную историю" />
   <meta property="og:description" content=" Гарантии от «Национальное бюро кредитных историй». Узнайте, как АО «НБКИ» обеспечивает надежность данных и защиту личной информации. Получите кредитную историю и рейтинг обеспеченные точностью
@@ -1162,26 +1164,60 @@
         </div><!-- /.container -->
       </div><!-- /.textblock_v7 -->
 
-
-      <div class="textblock_v7 textblock_v8 stickysection">
+      <div class="textblock_v7 textblock_v8  stickysection">
 
         <div class="container">
           <h2 class="borderblock__title">Как мы проверяем источники данных</h2>
           <div class="borderblock__text">
-            <p> Мы проводим комплексную проверку легитимности и благонадежности каждого источника кредитных данных
+            <p> Мы проводим комплексную проверку легитимности <br> и благонадежности каждого источника кредитных данных
             </p>
           </div><!-- /.textblock -->
-          
-          <div class="stickedslides slides stickysection__slides">
-            <div class="stickedslides__wrapper stickysection__slide active">
-              <div class="stickedslides__main">1</div><!-- /.stickedslides__main -->
-              <div class="stickedslides__aside">1</div><!-- /.stickedslides__aside -->
-            </div><!-- /.stickedslides__wrapper -->
+
+          <div class="stickedslides slides stickysection__slides ">
             <div class="stickedslides__wrapper stickysection__slide">
-              <div class="stickedslides__main">2</div><!-- /.stickedslides__main -->
-              <div class="stickedslides__aside">2</div><!-- /.stickedslides__aside -->
+              <div class="stickedslides__container">
+                <div class="stickedslides__main active" data-slide="0">
+                  <div class="stickedslides__icon">
+                    <img src="img/stickedslides__icon.svg" alt="" class="colored">
+                    <img src="img/stickedslides__icon_2.svg" alt="" class="default">
+                  </div>
+                  <div class="stickedslides__content">
+                    <div class="stickedslides__title">Проверка документов и регистрации</div>
+                    <div class="stickedslides__text">НБКИ получает пакет учредительных документов и анализирует право
+                      организации передавать кредитные данные</div>
+                  </div>
+                </div>
+                <div class="stickedslides__main" data-slide="1">
+                  <div class="stickedslides__icon">
+                    <img src="img/stickedslides__icon.svg" alt="" class="colored">
+                    <img src="img/stickedslides__icon_2.svg" alt="" class="default">
+                  </div>
+                  <div class="stickedslides__content">
+                    <div class="stickedslides__title">Комплексная комплаенс-проверка</div>
+                    <div class="stickedslides__text">Бюро проверяет достоверность сведений через сервисы комплексной
+                      проверки контрагентов, а также анализирует благонадежность представителей организации</div>
+                  </div>
+                </div>
+                <div class="stickedslides__main" data-slide="2">
+                  <div class="stickedslides__icon">
+                    <img src="img/stickedslides__icon.svg" alt="" class="colored">
+                    <img src="img/stickedslides__icon_2.svg" alt="" class="default">
+                  </div>
+                  <div class="stickedslides__content">
+                    <div class="stickedslides__title">Постоянный мониторинг контрагентов</div>
+                    <div class="stickedslides__text">Мы регулярно мониторим юрлица, исключённые Банком России из
+                      реестров, и оперативно прекращаем прием данных от организаций, утративших статус</div>
+                  </div>
+                </div>
+              </div>
+              <div class="stickedslides__aside">
+                <img src="img/cube_scroll1.svg" alt="" data-imgslide="0" class="active">
+                <img src="img/cube_scroll2.svg" alt="" data-imgslide="1">
+                <img src="img/cube_scroll3.svg" alt="" data-imgslide="2">
+              </div>
             </div><!-- /.stickedslides__wrapper -->
           </div><!-- /.stickedslides -->
+
         </div><!-- /.container -->
       </div><!-- /.textblock_v7 -->
 
@@ -1189,7 +1225,7 @@
       <div class="textblock_v7 textblock_v8">
 
         <div class="container">
-          <div class="borderblock__title">Почему НБКИ можно доверять</div>
+          <div class="borderblock__title">Как мы проверяем данные, <br>поступающие в НБКИ</div>
           <div class="tabslider__wrapper">
             <div class="tabslider__item">
               <div class="calccontent__item">
@@ -1228,7 +1264,8 @@
                   <b>Статус квалифицированного бюро</b>
                 </div>
                 <div class="calccontent__text">
-                  НБКИ первым в стране получило статус квалифицированного БКИ — подтверждение устойчивости, безопасности
+                  НБКИ первым в стране получило статус квалифицированного БКИ — подтверждение устойчивости,
+                  безопасности
                   ПО и достаточности собственных средств. Такой статус позволяет аккумулировать данные платежей
                   заемщиков по всем БКИ
                 </div>
@@ -1331,7 +1368,8 @@
                   <b>Статус квалифицированного бюро</b>
                 </div>
                 <div class="calccontent__text">
-                  НБКИ первым в стране получило статус квалифицированного БКИ — подтверждение устойчивости, безопасности
+                  НБКИ первым в стране получило статус квалифицированного БКИ — подтверждение устойчивости,
+                  безопасности
                   ПО и достаточности собственных средств. Такой статус позволяет аккумулировать данные платежей
                   заемщиков по всем БКИ
                 </div>
@@ -1395,7 +1433,9 @@
 
     </div>
   </main>
-    <script src="js/guarantee.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <script src="js/guarantee.js"></script>
 
 </body>
 

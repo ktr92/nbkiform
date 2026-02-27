@@ -87,11 +87,24 @@ margin-bottom: 16px;
 }
 .stickysection {
   top: 0;
-  background: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: sticky;
+  margin-top: 0;
+  background: #f5f7fa;
+  z-index: 3;
+  padding-bottom: 88px;
+  margin-bottom: 0;
+}
+.stickysection.stick {
+  position: sticky;
+
+}
+.stickysection.notsticky {
+  position: static;
+
 }
 
 .stickysection__slides {
@@ -101,16 +114,13 @@ margin-bottom: 16px;
 }
 
 .stickysection__slide {
-/*   position: absolute; */
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  display: none;
   justify-content: center;
   align-items: center;
   font-size: 3em;
-  background: #ddd;
   transition: opacity 0.5s;
 }
 
@@ -120,5 +130,87 @@ margin-bottom: 16px;
 }
 
 .stickedslides__wrapper {
-  
+  display: flex;
+  gap: 43px;
+}
+
+
+.stickedslides__main {
+/*   background-image: url(../img/stickedslides__icon_2.svg);
+    background-position: left -73px top -58px;
+  background-repeat: no-repeat;
+  padding-left: 143px;
+  min-height: 92px;
+  margin-bottom: 32px; */
+}
+
+.stickedslides__main.active  {
+/*   background-image: url(../img/stickedslides__icon.svg);
+    background-position: left -73px top -58px;
+  background-repeat: no-repeat; */
+
+}
+.stickedslides__icon {
+  position: relative;
+  min-width: 121px;
+  max-width: 121px;
+  height: 72px;
+}
+.stickedslides__main  {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.stickedslides__main img {
+  position: absolute;
+      max-width: initial;
+    left: -71px;
+    top: -74px;
+}
+.stickedslides__main img.colored {
+  display: none;
+}
+.stickedslides__main.active img.colored {
+  display: block;
+}
+.stickedslides__main.active img.default {
+  display: none;
+}
+
+.stickedslides__title {
+  font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+margin-bottom: 12px;
+}
+.stickedslides__text {
+font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+}
+
+.stickedslides__mainblock {
+
+}
+.stickedslides__aside {
+  max-width: 500px;
+  min-width: 500px;
+  height: 516px;
+    position: relative;
+}
+.stickedslides__aside img {
+  display: none;
+  position: absolute;
+    left: -131px;
+    max-width: initial;
+    top: -35px;
+}
+
+
+.stickedslides__aside img.active {
+  display: block;
+}
+.stickysection {
+  overflow: visible;
 }
