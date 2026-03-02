@@ -33,7 +33,7 @@ const stickyBlock = (function () {
       const currentScrollTop = document.documentElement.scrollTop;
       console.log(currentScrollTop - lastScrollTop);
       const diff = currentScrollTop - lastScrollTop;
-      if (diff > 200) {
+      if (diff > 100) {
         lastScrollTop = currentScrollTop;
         return;
       }
@@ -96,8 +96,8 @@ const stickyBlock = (function () {
 
   const startSlides = () => {
     Block.isactive = true;
-    if (Block.$element.nextSibling)
-      Block.$element.classList.remove("notsticky");
+   /*  if (Block.$element.nextSibling)
+      Block.$element.classList.remove("notsticky"); */
 
     /* slidesOnScroll(document.documentElement.scrollTop) */
     /* Block.$element.addEventListener("scroll", slidesOnScroll); */
