@@ -134,4 +134,34 @@ const stickyBlock = (function () {
 
 $(function () {
   stickyBlock.init(".stickysection", "[data-slide]", "[data-imgslide]");
+
+   $("[data-slider='storyslider']").each(function () {
+    $(this).slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      prevArrow: $(this).closest('[data-sliderwrapper]').find('[data-arrow="left"]'),
+      nextArrow: $(this).closest('[data-sliderwrapper]').find('[data-arrow="right"]'),
+      responsive: [
+        {
+          breakpoint: 999,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  });
 });
+
+
