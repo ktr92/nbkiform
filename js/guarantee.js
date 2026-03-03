@@ -31,14 +31,14 @@ const stickyBlock = (function () {
   const isSlidingDown = (el) => {
     if (Block.isactive) {
       const currentScrollTop = document.documentElement.scrollTop;
-      console.log(currentScrollTop - lastScrollTop);
+   /*    console.log(currentScrollTop - lastScrollTop); */
       const diff = currentScrollTop - lastScrollTop;
       if (diff > 100) {
         lastScrollTop = currentScrollTop;
         return;
       }
 
-      if (diff > 150) {
+      if (diff > 80) {
         lastScrollTop = currentScrollTop;
         nextSlide();
       } else if (diff < -150) {
@@ -50,6 +50,7 @@ const stickyBlock = (function () {
 
 
   const nextSlide = () => {
+
     if (Block.current !== Block.$slides.length - 1) {
       deactivateSlide(Block.current);
       Block.current++;
@@ -85,6 +86,7 @@ const stickyBlock = (function () {
   };
 
   const activateSlide = (index) => {
+
     Block.$slides[index].classList.add("active");
     Block.$dots[index].classList.add("active");
   };
@@ -96,8 +98,8 @@ const stickyBlock = (function () {
 
   const startSlides = () => {
     Block.isactive = true;
-   /*  if (Block.$element.nextSibling)
-      Block.$element.classList.remove("notsticky"); */
+    if (Block.$element.nextSibling)
+      Block.$element.classList.remove("notsticky");
 
     /* slidesOnScroll(document.documentElement.scrollTop) */
     /* Block.$element.addEventListener("scroll", slidesOnScroll); */
@@ -120,7 +122,7 @@ const stickyBlock = (function () {
 
     document.addEventListener("scroll", function (e) {
       if (isElementAtTopOfScreen(Block.$element)) {
-        console.log(Block);
+      /*   console.log(Block); */
         startSlides();
         isSlidingDown();
       }
