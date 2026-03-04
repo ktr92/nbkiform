@@ -1,0 +1,51 @@
+.rsmainslider_nogb .rsmainslider__wrapper, 
+.rsmainslider_nogb .rsmainslider__container {
+  background: none;
+  background-color: none;
+  min-height: unset;
+  box-shadow: none;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+}
+.rsmainslider_nogb  {
+  margin: 40px 0;
+}
+.rsmainslider_calc .rsmainslider__main {
+  width: 457px;
+}
+.rsmainslider_calc .rsmainslider__image{
+  position: static;
+  transform: none;
+  margin: 0;
+
+}
+.rsmainslider_calc .rsmainslider__filter{
+
+  padding: 10px 0;
+}
+
+.filterform {
+  border-radius: 16px;
+padding: 32px;
+box-shadow: 0 4px 4px 0 rgba(115, 100, 178, 0.1);
+background: #fff;
+width: 100%;
+}
+.rsmainslider__filter {
+  width: 100%;
+  max-width: 556px;
+}
+
+.filterform .calcform__input {
+  margin-top: 0;
+  width: 100%;
+}
+
+.filterform__button {
+  margin-top: 24px;
+  margin-right: 0;
+}
+.filterform__button .btn_calc {
+ border-radius: 16px;
+}
