@@ -135,7 +135,10 @@ const stickyBlock = (function () {
 })();
 
 $(function () {
-  stickyBlock.init(".stickysection", "[data-slide]", "[data-imgslide]");
+  if (document.querySelector('.stickysection')) {
+    stickyBlock.init(".stickysection", "[data-slide]", "[data-imgslide]");
+  }
+  
 
    $("[data-slider='storyslider']").each(function () {
     $(this).slick({
